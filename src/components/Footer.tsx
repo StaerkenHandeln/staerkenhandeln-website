@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <img
-            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/0aa26b520_96e1b11fe_SH_Logo_Hellblau_originalgetreu.png"
-            alt="StärkenHandeln Logo"
+            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png"
+            alt="StärkenHandeln Symbol"
             className="h-16 w-auto object-contain mb-3"
           />
           <p className="text-sm text-blue-100/60">
