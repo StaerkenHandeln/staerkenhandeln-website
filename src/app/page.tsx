@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { projects } from "@/lib/projects";
 
 const pillars = [
   {
@@ -15,24 +16,6 @@ const pillars = [
     icon: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/df56318ef_iconhandeln.png",
     title: "HANDELN",
     text: "Ideen werden wertvoll, wenn wir beginnen. Wir unterstützen dich dabei, Schritt für Schritt Verantwortung zu übernehmen.",
-  },
-];
-
-const projects = [
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/e9ccec662_ChatGPTImage29Aug202620_23_33.png",
-    title: "Die 7 Seelen",
-    tagline: "Eine Stimme für SternenVäter",
-  },
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/516b652c8_ChatGPTImage29Aug202620_29_04.png",
-    title: "Mann & Weib in Einigkeit",
-    tagline: "Verbindung und Miteinander",
-  },
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/8a5555abd_ChatGPTImage29Aug202620_39_18.png",
-    title: "Klangvoll leben",
-    tagline: "Klang · Frequenz · Liebe",
   },
 ];
 
@@ -106,16 +89,31 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {projects.map((p) => (
-              <div key={p.title} className="rounded-xl overflow-hidden shadow-sm border border-stone-200 bg-white">
-                <img src={p.image} alt={p.title} className="w-full h-48 object-cover" />
-                <div className="p-5">
+              <div
+                key={p.slug}
+                className="rounded-xl overflow-hidden shadow-sm border border-stone-200 bg-white flex flex-col"
+              >
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full aspect-[2/3] object-cover object-top"
+                />
+                <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">{p.title}</h3>
-                  <p className="text-sm text-stone-500 mb-4">{p.tagline}</p>
-                  <Link
-                    href="/projekte"
-                    className="text-[var(--color-maroon)] text-sm font-semibold hover:underline"
+                  <p
+                    className={`text-sm mb-4 ${
+                      p.accent === "navy" ? "text-[var(--color-navy)]" : "text-[var(--color-maroon)]"
+                    }`}
                   >
-                    Projekt entdecken →
+                    {p.tagline}
+                  </p>
+                  <Link
+                    href={`/projekte/${p.slug}`}
+                    className={`mt-auto inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all ${
+                      p.accent === "navy" ? "text-[var(--color-navy)]" : "text-[var(--color-maroon)]"
+                    }`}
+                  >
+                    Projekt entdecken <span aria-hidden>→</span>
                   </Link>
                 </div>
               </div>

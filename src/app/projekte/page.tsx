@@ -1,23 +1,5 @@
-const projects = [
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/e9ccec662_ChatGPTImage29Aug202620_23_33.png",
-    title: "Die 7 Seelen",
-    tagline: "Eine Stimme für SternenVäter",
-    text: "Ein Projekt, das Vätern eine Stimme gibt, die einen Verlust erlebt haben – und Raum schafft, Trauer und Verbindung sichtbar zu machen.",
-  },
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/516b652c8_ChatGPTImage29Aug202620_29_04.png",
-    title: "Mann & Weib in Einigkeit",
-    tagline: "Verbindung und Miteinander",
-    text: "Ein Projekt rund um Beziehung, Begegnung und das Zusammenspiel von Ich, Du und Wir – für mehr Verständnis zwischen Menschen.",
-  },
-  {
-    image: "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/8a5555abd_ChatGPTImage29Aug202620_39_18.png",
-    title: "Klangvoll leben",
-    tagline: "Klang · Frequenz · Liebe",
-    text: "Achtsame Begleitung mit Klang und Klangschalen für mehr Harmonie im Leben – initiiert und geleitet von Karen Hagen.",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/lib/projects";
 
 export default function Projekte() {
   return (
@@ -29,12 +11,34 @@ export default function Projekte() {
 
       <div className="grid md:grid-cols-3 gap-6">
         {projects.map((p) => (
-          <div key={p.title} className="rounded-xl overflow-hidden shadow-sm border border-stone-200 bg-white">
-            <img src={p.image} alt={p.title} className="w-full h-52 object-cover" />
-            <div className="p-6">
+          <div
+            key={p.slug}
+            className="rounded-xl overflow-hidden shadow-sm border border-stone-200 bg-white flex flex-col"
+          >
+            <img
+              src={p.image}
+              alt={p.title}
+              className="w-full aspect-[2/3] object-cover object-top"
+            />
+            <div className="p-6 flex flex-col flex-1">
               <h2 className="font-display text-xl text-[var(--color-navy)] mb-1">{p.title}</h2>
-              <p className="text-sm text-[var(--color-maroon)] font-medium mb-3">{p.tagline}</p>
-              <p className="text-sm text-stone-600 leading-relaxed">{p.text}</p>
+              <p
+                className={`text-sm font-medium mb-3 ${
+                  p.accent === "navy" ? "text-[var(--color-navy)]" : "text-[var(--color-maroon)]"
+                }`}
+              >
+                {p.tagline}
+              </p>
+              <p className="text-sm text-stone-600 leading-relaxed mb-5">{p.text}</p>
+              <Link
+                href={`/projekte/${p.slug}`}
+                className={`mt-auto inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all ${
+                  p.accent === "navy" ? "text-[var(--color-navy)]" : "text-[var(--color-maroon)]"
+                }`}
+              >
+                Projekt entdecken
+                <span aria-hidden>→</span>
+              </Link>
             </div>
           </div>
         ))}
