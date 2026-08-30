@@ -101,12 +101,13 @@ export default function Home() {
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">{p.title}</h3>
                   <p
-                    className={`text-sm mb-4 ${
+                    className={`text-sm font-medium mb-3 ${
                       p.accent === "navy" ? "text-[var(--color-navy)]" : "text-[var(--color-maroon)]"
                     }`}
                   >
                     {p.tagline}
                   </p>
+                  <p className="text-sm text-stone-600 leading-relaxed mb-5">{p.text}</p>
                   <Link
                     href={`/projekte/${p.slug}`}
                     className={`mt-auto inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all ${
