@@ -23,7 +23,7 @@ export default function Sidebar() {
       <div className="md:hidden flex items-center justify-between bg-[var(--color-navy)] text-white px-4 h-16 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/0aa26b520_96e1b11fe_SH_Logo_Hellblau_originalgetreu.png"
+            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/100f68ecb_logo_wordmark_recolored.png"
             alt="StärkenHandeln Logo"
             className="h-9 w-auto object-contain"
           />
@@ -50,12 +50,12 @@ export default function Sidebar() {
         `}
       >
         <div>
-          <div className="px-6 pt-8 pb-6 hidden md:block">
+          <div className="px-4 pt-8 pb-6 hidden md:block">
             <Link href="/" onClick={() => setOpen(false)}>
               <img
-                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/0aa26b520_96e1b11fe_SH_Logo_Hellblau_originalgetreu.png"
+                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/100f68ecb_logo_wordmark_recolored.png"
                 alt="StärkenHandeln Logo"
-                className="w-full max-w-[180px] object-contain mx-auto"
+                className="w-full object-contain"
               />
             </Link>
           </div>
