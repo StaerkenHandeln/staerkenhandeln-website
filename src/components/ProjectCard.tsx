@@ -33,8 +33,9 @@ export function ProjectCard({ project }: { project: Project }) {
   }
 
   // "Die 7 Seelen" and "Klangvoll leben": same fixed landscape frame so both
-  // cards match in size, with just a small "Projekt entdecken" button
-  // overlaid directly on the artwork — no separate text block.
+  // cards match in size. The small "Projekt entdecken" button sits below
+  // the artwork (not on top of it) so it never covers the baked-in title —
+  // no extra paragraph text, just image + button.
   return (
     <Link
       href={`/projekte/${project.slug}`}
@@ -46,8 +47,9 @@ export function ProjectCard({ project }: { project: Project }) {
           alt={project.title}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/45 to-transparent" />
-        <span className="absolute left-3 bottom-3 inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+      </div>
+      <div className="p-3">
+        <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
           Projekt entdecken <span aria-hidden>→</span>
         </span>
       </div>

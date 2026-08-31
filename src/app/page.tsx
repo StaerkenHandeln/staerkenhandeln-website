@@ -9,12 +9,16 @@ const team = [
       "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/6f4e1a71a_37bced5a4_WhatsAppImage2026-08-28at201412.jpg",
     name: "Tilo Juncken",
     role: "Präsident",
+    bio: "Initiator von StärkenHandeln und der Projekte. Sein Anliegen ist es, Menschen Raum zu geben, ihre Fähigkeiten zu entfalten und neue Wege zu gehen.",
+    linkLabel: "Mehr über Tilo →",
   },
   {
     image:
       "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/aca8b77ca_70e14c604_ChatGPTImage28Aug202614_22_50.png",
     name: "Karen Hagen",
     role: "Vizepräsidentin",
+    bio: 'Mit "Klangvoll leben" bringt sie Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln.',
+    linkLabel: "Mehr über Karen →",
   },
 ];
 
@@ -110,57 +114,106 @@ export default function Home() {
       <WaveDivider className="mt-2" />
 
       {/* Team */}
-      <section className="max-w-3xl mx-auto px-6 md:px-12 pt-2 pb-6 text-center">
-        <h2 className="font-display text-3xl text-[var(--color-navy)] mb-2">
-          Die Menschen hinter StärkenHandeln
-        </h2>
-        <p className="text-stone-500 mb-10">Verantwortung hat ein Gesicht.</p>
-
-        <div className="flex items-center justify-center gap-8 md:gap-16 flex-wrap">
-          <div className="flex flex-col items-center w-32">
-            <img
-              src={team[0].image}
-              alt={team[0].name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-xl object-cover mb-3"
-            />
-            <h3 className="font-display text-base text-[var(--color-navy)]">
-              {team[0].name}
-            </h3>
-            <p className="text-xs text-[var(--color-maroon)] font-medium mb-1">
-              {team[0].role}
-            </p>
-            <Link
-              href="/ueber-uns"
-              className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
-            >
-              Mehr über Tilo →
-            </Link>
-          </div>
-
-          <img
-            src={symbolLogo}
-            alt="StärkenHandeln Zeichen"
-            className="w-10 h-10 md:w-12 md:h-12 object-contain"
+      <section className="relative overflow-hidden py-4">
+        {/* Side-swept red / blue accent waves */}
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute inset-0 w-full h-full"
+          viewBox="0 0 1200 400"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="teamRed" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="var(--color-maroon)" stopOpacity="0.32" />
+              <stop offset="100%" stopColor="var(--color-maroon)" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="teamBlue" x1="100%" y1="0%" x2="0%" y2="0%">
+              <stop offset="0%" stopColor="var(--color-blue)" stopOpacity="0.32" />
+              <stop offset="100%" stopColor="var(--color-blue)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 400 C 120 300, 60 180, 220 120 C 340 75, 300 20, 460 0 L 0 0 Z"
+            fill="url(#teamRed)"
           />
+          <path
+            d="M0 340 C 160 260, 140 160, 300 130 C 420 105, 400 40, 520 10"
+            fill="none"
+            stroke="var(--color-maroon)"
+            strokeWidth="2"
+            opacity="0.35"
+          />
+          <path
+            d="M1200 400 C 1080 300, 1140 180, 980 120 C 860 75, 900 20, 740 0 L 1200 0 Z"
+            fill="url(#teamBlue)"
+          />
+          <path
+            d="M1200 340 C 1040 260, 1060 160, 900 130 C 780 105, 800 40, 680 10"
+            fill="none"
+            stroke="var(--color-blue)"
+            strokeWidth="2"
+            opacity="0.35"
+          />
+        </svg>
 
-          <div className="flex flex-col items-center w-32">
+        <div className="relative max-w-3xl mx-auto px-6 md:px-12 text-center">
+          <h2 className="font-display text-3xl text-[var(--color-navy)] mb-2">
+            Die Menschen hinter StärkenHandeln
+          </h2>
+          <p className="text-stone-500 mb-10">Verantwortung hat ein Gesicht.</p>
+
+          <div className="flex items-start justify-center gap-6 md:gap-12 flex-wrap">
+            <div className="flex flex-col items-center w-44 md:w-52">
+              <img
+                src={team[0].image}
+                alt={team[0].name}
+                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
+              />
+              <h3 className="font-display text-base text-[var(--color-navy)]">
+                {team[0].name}
+              </h3>
+              <p className="text-xs text-[var(--color-maroon)] font-medium mb-2">
+                {team[0].role}
+              </p>
+              <p className="text-xs text-stone-500 leading-relaxed mb-2">
+                {team[0].bio}
+              </p>
+              <Link
+                href="/ueber-uns"
+                className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
+              >
+                {team[0].linkLabel}
+              </Link>
+            </div>
+
             <img
-              src={team[1].image}
-              alt={team[1].name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-xl object-cover mb-3"
+              src={symbolLogo}
+              alt="StärkenHandeln Zeichen"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain mt-8 shrink-0"
             />
-            <h3 className="font-display text-base text-[var(--color-navy)]">
-              {team[1].name}
-            </h3>
-            <p className="text-xs text-[var(--color-maroon)] font-medium mb-1">
-              {team[1].role}
-            </p>
-            <Link
-              href="/ueber-uns"
-              className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
-            >
-              Mehr über Karen →
-            </Link>
+
+            <div className="flex flex-col items-center w-44 md:w-52">
+              <img
+                src={team[1].image}
+                alt={team[1].name}
+                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
+              />
+              <h3 className="font-display text-base text-[var(--color-navy)]">
+                {team[1].name}
+              </h3>
+              <p className="text-xs text-[var(--color-maroon)] font-medium mb-2">
+                {team[1].role}
+              </p>
+              <p className="text-xs text-stone-500 leading-relaxed mb-2">
+                {team[1].bio}
+              </p>
+              <Link
+                href="/ueber-uns"
+                className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
+              >
+                {team[1].linkLabel}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
