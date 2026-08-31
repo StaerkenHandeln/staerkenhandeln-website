@@ -1,5 +1,6 @@
 import Link from "next/link";
 import WaveDivider from "@/components/WaveDivider";
+import { projects } from "@/lib/projects";
 
 const team = [
   {
@@ -19,29 +20,21 @@ const team = [
 const symbolLogo =
   "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png";
 
-const mannWeib = {
-  slug: "mann-weib-in-einigkeit",
-  title: "Mann & Weib in Einigkeit",
-  image:
+// Homepage-only poster images in the new format (text/branding baked into
+// the graphic itself). Original project data (title/tagline/text/detail)
+// stays untouched in lib/projects.ts and is reused as-is below.
+const homeImages: Record<string, string> = {
+  "mann-weib-in-einigkeit":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/d9c4cab34_9fab4407b_ChatGPTImage29Aug202620_29_04.png",
-  text: "Ein Projekt rund um Beziehung, Begegnung und das Zusammenspiel von Ich, Du und Wir – für mehr Verständnis zwischen Menschen.",
-};
-
-const die7Seelen = {
-  slug: "die-7-seelen",
-  title: "Die 7 Seelen",
-  image:
+  "die-7-seelen":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/806fbd66a_4cacb8bdc_ChatGPTImage29Aug202620_23_33.png",
-  text: "Das Projekt, das Vätern eine Stimme gibt, die einen Verlust erlebt haben – und dem Fühlen, Trauer und Verbindung sichtbar zu machen.",
+  "klangvoll-leben":
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/dbb8cc94b_b4ba30cc6_ChatGPTImage29Aug202620_39_18.png",
 };
 
-const klangvollLeben = {
-  slug: "klangvoll-leben",
-  title: "Klangvoll leben",
-  image:
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/dbb8cc94b_b4ba30cc6_ChatGPTImage29Aug202620_39_18.png",
-  text: "Achtsame Begleitung mit Klang und Klangschalen für mehr Harmonie und Balance im Leben – intuitiv und gelebt von Karen Hagen.",
-};
+const mannWeib = projects.find((p) => p.slug === "mann-weib-in-einigkeit")!;
+const die7Seelen = projects.find((p) => p.slug === "die-7-seelen")!;
+const klangvollLeben = projects.find((p) => p.slug === "klangvoll-leben")!;
 
 function ProjectButton({ href }: { href: string }) {
   return (
@@ -122,7 +115,7 @@ export default function Home() {
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-white grid md:grid-cols-2 mb-6">
           <div className="flex items-center justify-center p-6 bg-stone-50">
             <img
-              src={mannWeib.image}
+              src={homeImages[mannWeib.slug]}
               alt={mannWeib.title}
               className="w-full max-w-[220px] md:max-w-[240px] h-auto object-contain"
             />
@@ -146,7 +139,7 @@ export default function Home() {
             >
               <div className="flex items-center justify-center p-5 bg-stone-50">
                 <img
-                  src={p.image}
+                  src={homeImages[p.slug]}
                   alt={p.title}
                   className="w-full max-w-[200px] h-auto object-contain"
                 />
