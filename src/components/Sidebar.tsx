@@ -23,7 +23,7 @@ export default function Sidebar() {
       <div className="md:hidden flex items-center justify-between bg-[var(--color-navy)] text-white px-4 h-16 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/100f68ecb_logo_wordmark_recolored.png"
+            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5d0cd717d_logo_wordmark_blue.png"
             alt="StärkenHandeln Logo"
             className="h-9 w-auto object-contain"
           />
@@ -53,7 +53,7 @@ export default function Sidebar() {
           <div className="px-4 pt-8 pb-6 hidden md:block">
             <Link href="/" onClick={() => setOpen(false)}>
               <img
-                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/100f68ecb_logo_wordmark_recolored.png"
+                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5d0cd717d_logo_wordmark_blue.png"
                 alt="StärkenHandeln Logo"
                 className="w-full object-contain"
               />
@@ -91,7 +91,7 @@ export default function Sidebar() {
           <p className="leading-relaxed font-display text-base">
             <span className="text-[var(--color-maroon)]">Stärken.</span>
             <br />
-            <span className="text-[var(--color-blue-light)]">Verbinden.</span>
+            <span className="text-[var(--color-blue)]">Verbinden.</span>
             <br />
             <span className="text-[var(--color-gold)]">Handeln.</span>
           </p>
