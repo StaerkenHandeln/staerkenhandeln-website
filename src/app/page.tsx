@@ -1,6 +1,7 @@
 import Link from "next/link";
 import WaveDivider from "@/components/WaveDivider";
 import { projects } from "@/lib/projects";
+import { ProjectCard } from "@/components/ProjectCard";
 
 const team = [
   {
@@ -20,32 +21,9 @@ const team = [
 const symbolLogo =
   "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png";
 
-// Homepage-only poster images in the new format (text/branding baked into
-// the graphic itself). Original project data (title/tagline/text/detail)
-// stays untouched in lib/projects.ts and is reused as-is below.
-const homeImages: Record<string, string> = {
-  "mann-weib-in-einigkeit":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/d9c4cab34_9fab4407b_ChatGPTImage29Aug202620_29_04.png",
-  "die-7-seelen":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/806fbd66a_4cacb8bdc_ChatGPTImage29Aug202620_23_33.png",
-  "klangvoll-leben":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/dbb8cc94b_b4ba30cc6_ChatGPTImage29Aug202620_39_18.png",
-};
-
 const mannWeib = projects.find((p) => p.slug === "mann-weib-in-einigkeit")!;
 const die7Seelen = projects.find((p) => p.slug === "die-7-seelen")!;
 const klangvollLeben = projects.find((p) => p.slug === "klangvoll-leben")!;
-
-function ProjectButton({ href }: { href: string }) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-maroon)] text-white text-sm font-medium px-4 py-2 hover:bg-[var(--color-maroon-dark)] transition-colors"
-    >
-      Projekt entdecken <span aria-hidden>→</span>
-    </Link>
-  );
-}
 
 export default function Home() {
   return (
@@ -111,49 +89,12 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Mann & Weib – breites Hauptelement */}
-        <div className="rounded-2xl overflow-hidden border border-stone-200 bg-white grid md:grid-cols-2 mb-6">
-          <div className="flex items-center justify-center p-6 bg-stone-50">
-            <img
-              src={homeImages[mannWeib.slug]}
-              alt={mannWeib.title}
-              className="w-full max-w-[220px] md:max-w-[240px] h-auto object-contain"
-            />
+        <div className="flex flex-col gap-6 mb-6">
+          <ProjectCard project={mannWeib} wide />
+          <div className="grid md:grid-cols-2 gap-6">
+            <ProjectCard project={die7Seelen} />
+            <ProjectCard project={klangvollLeben} />
           </div>
-          <div className="p-6 md:p-8 flex flex-col justify-center">
-            <p className="text-stone-600 text-sm leading-relaxed mb-5">
-              {mannWeib.text}
-            </p>
-            <div>
-              <ProjectButton href={`/projekte/${mannWeib.slug}`} />
-            </div>
-          </div>
-        </div>
-
-        {/* Die 7 Seelen + Klangvoll leben */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
-          {[die7Seelen, klangvollLeben].map((p) => (
-            <div
-              key={p.slug}
-              className="rounded-2xl overflow-hidden border border-stone-200 bg-white flex flex-col"
-            >
-              <div className="flex items-center justify-center p-5 bg-stone-50">
-                <img
-                  src={homeImages[p.slug]}
-                  alt={p.title}
-                  className="w-full max-w-[200px] h-auto object-contain"
-                />
-              </div>
-              <div className="p-5 flex flex-col flex-1">
-                <p className="text-stone-600 text-sm leading-relaxed mb-5">
-                  {p.text}
-                </p>
-                <div className="mt-auto">
-                  <ProjectButton href={`/projekte/${p.slug}`} />
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
 
         <div className="flex justify-end">
