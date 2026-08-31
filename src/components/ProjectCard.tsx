@@ -4,7 +4,7 @@ import type { Project } from "@/lib/projects";
 // Final, user-approved landscape poster graphics (title + tagline, and for
 // "Mann & Weib" also the full text + button, baked directly into the
 // artwork). These are the exact images the user supplied — used as-is,
-// full width, never cropped or faded.
+// never cropped for content, only fit to a shared landscape frame.
 const posterImages: Record<string, string> = {
   "mann-weib-in-einigkeit":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/e455871dd_2741c5897_ChatGPTImage31Aug202613_48_04.png",
@@ -15,8 +15,7 @@ const posterImages: Record<string, string> = {
 };
 
 // "Mann & Weib" already has its full text + button baked into the poster —
-// the whole card is simply a clickable image. The other two only bake in
-// the title/tagline, so we add the original project text + a button below.
+// the whole card is simply a clickable image, nothing else needed.
 const selfContained = new Set(["mann-weib-in-einigkeit"]);
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -33,22 +32,25 @@ export function ProjectCard({ project }: { project: Project }) {
     );
   }
 
+  // "Die 7 Seelen" and "Klangvoll leben": same fixed landscape frame so both
+  // cards match in size, with just a small "Projekt entdecken" button
+  // overlaid directly on the artwork — no separate text block.
   return (
-    <div className="rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] flex flex-col h-full">
-      <img src={image} alt={project.title} className="w-full h-auto block" />
-      <div className="p-6 flex flex-col flex-1">
-        <p className="text-sm text-stone-600 leading-relaxed mb-5">
-          {project.text}
-        </p>
-        <div className="mt-auto">
-          <Link
-            href={`/projekte/${project.slug}`}
-            className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-maroon)] text-white text-sm font-medium px-4 py-2 hover:bg-[var(--color-maroon-dark)] transition-colors"
-          >
-            Projekt entdecken <span aria-hidden>→</span>
-          </Link>
-        </div>
+    <Link
+      href={`/projekte/${project.slug}`}
+      className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] hover:opacity-95 transition-opacity"
+    >
+      <div className="relative aspect-[16/9] w-full">
+        <img
+          src={image}
+          alt={project.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/45 to-transparent" />
+        <span className="absolute left-3 bottom-3 inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+          Projekt entdecken <span aria-hidden>→</span>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }
