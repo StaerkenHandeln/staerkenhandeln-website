@@ -90,7 +90,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-6 mb-6">
-          <ProjectCard project={mannWeib} wide />
+          <ProjectCard project={mannWeib} />
           <div className="grid md:grid-cols-2 gap-6">
             <ProjectCard project={die7Seelen} />
             <ProjectCard project={klangvollLeben} />
