@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Start", icon: HomeIcon },
   { href: "/ueber-uns", label: "Über uns", icon: UserIcon },
-  { href: "/projekte", label: "Projekte", icon: FolderIcon },
+  { href: "/projekte", label: "Alle Projekte", icon: FolderIcon },
   { href: "/mitwirken", label: "Mitwirken", icon: PeopleIcon },
   { href: "/der-verein", label: "Der Verein", icon: ShieldIcon },
   { href: "/kontakt", label: "Kontakt", icon: MailIcon },
@@ -91,7 +91,7 @@ export default function Sidebar() {
           <p className="leading-relaxed font-display text-base">
             <span className="text-[var(--color-maroon)]">Stärken.</span>
             <br />
-            <span className="text-white">Verbinden.</span>
+            <span className="text-[var(--color-blue-light)]">Verbinden.</span>
             <br />
             <span className="text-[var(--color-gold)]">Handeln.</span>
           </p>

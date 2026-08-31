@@ -1,8 +1,10 @@
 import Link from "next/link";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-navy)] text-blue-100/80 mt-16">
+    <footer className="relative bg-[var(--color-navy)] text-blue-100/80 mt-6">
+      <WaveDivider className="absolute -top-8 left-0 opacity-70" />
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="flex flex-col items-center text-center">
           <img
@@ -21,7 +23,7 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm text-blue-100/70">
             <li><Link href="/ueber-uns" className="hover:text-[var(--color-gold)] transition-colors">Über uns</Link></li>
-            <li><Link href="/projekte" className="hover:text-[var(--color-gold)] transition-colors">Projekte</Link></li>
+            <li><Link href="/projekte" className="hover:text-[var(--color-gold)] transition-colors">Alle Projekte</Link></li>
             <li><Link href="/mitwirken" className="hover:text-[var(--color-gold)] transition-colors">Mitwirken</Link></li>
             <li><Link href="/der-verein" className="hover:text-[var(--color-gold)] transition-colors">Der Verein</Link></li>
             <li><Link href="/kontakt" className="hover:text-[var(--color-gold)] transition-colors">Kontakt</Link></li>
@@ -60,7 +62,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-6 text-center">
         <p className="font-display text-sm">
           <span className="text-[var(--color-maroon)]">Stärken.</span>{" "}
-          <span className="text-white">Verbinden.</span>{" "}
+          <span className="text-[var(--color-blue-light)]">Verbinden.</span>{" "}
           <span className="text-[var(--color-gold)]">Handeln.</span>
         </p>
         <p className="text-xs text-blue-100/50 mt-2">
