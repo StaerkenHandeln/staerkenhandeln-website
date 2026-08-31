@@ -7,7 +7,7 @@ import type { Project } from "@/lib/projects";
 // never cropped for content, only fit to a shared landscape frame.
 const posterImages: Record<string, string> = {
   "mann-weib-in-einigkeit":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/e455871dd_2741c5897_ChatGPTImage31Aug202613_48_04.png",
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/495237e14_mann_weib_flatter.png",
   "die-7-seelen":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5523241eb_789524c12_ChatGPTImage31Aug202613_53_39.png",
   "klangvoll-leben":
