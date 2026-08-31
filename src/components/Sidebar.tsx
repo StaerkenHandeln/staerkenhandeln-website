@@ -23,7 +23,7 @@ export default function Sidebar() {
       <div className="md:hidden flex items-center justify-between bg-[var(--color-navy)] text-white px-4 h-16 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5d0cd717d_logo_wordmark_blue.png"
+            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/8262dbef4_logo_wordmark_blue_v2.png"
             alt="StärkenHandeln Logo"
             className="h-9 w-auto object-contain"
           />
@@ -53,7 +53,7 @@ export default function Sidebar() {
           <div className="px-4 pt-8 pb-6 hidden md:block">
             <Link href="/" onClick={() => setOpen(false)}>
               <img
-                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5d0cd717d_logo_wordmark_blue.png"
+                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/8262dbef4_logo_wordmark_blue_v2.png"
                 alt="StärkenHandeln Logo"
                 className="w-full object-contain"
               />
