@@ -1,17 +1,16 @@
 import Link from "next/link";
-import { projects } from "@/lib/projects";
 import WaveDivider from "@/components/WaveDivider";
 
 const team = [
   {
     image:
-      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/b0cce7bf7_WhatsAppImage2026-08-28at201412.jpeg",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/6f4e1a71a_37bced5a4_WhatsAppImage2026-08-28at201412.jpg",
     name: "Tilo Juncken",
     role: "Präsident",
   },
   {
     image:
-      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/a981e2b71_ChatGPTImage28Aug202614_22_50.png",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/aca8b77ca_70e14c604_ChatGPTImage28Aug202614_22_50.png",
     name: "Karen Hagen",
     role: "Vizepräsidentin",
   },
@@ -20,11 +19,35 @@ const team = [
 const symbolLogo =
   "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png";
 
-function ProjectLink({ href }: { href: string }) {
+const mannWeib = {
+  slug: "mann-weib-in-einigkeit",
+  title: "Mann & Weib in Einigkeit",
+  image:
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/d9c4cab34_9fab4407b_ChatGPTImage29Aug202620_29_04.png",
+  text: "Ein Projekt rund um Beziehung, Begegnung und das Zusammenspiel von Ich, Du und Wir – für mehr Verständnis zwischen Menschen.",
+};
+
+const die7Seelen = {
+  slug: "die-7-seelen",
+  title: "Die 7 Seelen",
+  image:
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/806fbd66a_4cacb8bdc_ChatGPTImage29Aug202620_23_33.png",
+  text: "Das Projekt, das Vätern eine Stimme gibt, die einen Verlust erlebt haben – und dem Fühlen, Trauer und Verbindung sichtbar zu machen.",
+};
+
+const klangvollLeben = {
+  slug: "klangvoll-leben",
+  title: "Klangvoll leben",
+  image:
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/dbb8cc94b_b4ba30cc6_ChatGPTImage29Aug202620_39_18.png",
+  text: "Achtsame Begleitung mit Klang und Klangschalen für mehr Harmonie und Balance im Leben – intuitiv und gelebt von Karen Hagen.",
+};
+
+function ProjectButton({ href }: { href: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-maroon)] hover:gap-2.5 transition-all"
+      className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-maroon)] text-white text-sm font-medium px-4 py-2 hover:bg-[var(--color-maroon-dark)] transition-colors"
     >
       Projekt entdecken <span aria-hidden>→</span>
     </Link>
@@ -32,10 +55,6 @@ function ProjectLink({ href }: { href: string }) {
 }
 
 export default function Home() {
-  const mannWeib = projects.find((p) => p.slug === "mann-weib-in-einigkeit")!;
-  const die7Seelen = projects.find((p) => p.slug === "die-7-seelen")!;
-  const klangvollLeben = projects.find((p) => p.slug === "klangvoll-leben")!;
-
   return (
     <div>
       {/* Hero */}
@@ -101,22 +120,20 @@ export default function Home() {
 
         {/* Mann & Weib – breites Hauptelement */}
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-white grid md:grid-cols-2 mb-6">
-          <img
-            src={mannWeib.image}
-            alt={mannWeib.title}
-            className="w-full h-56 md:h-full object-cover object-top"
-          />
+          <div className="flex items-center justify-center p-6 bg-stone-50">
+            <img
+              src={mannWeib.image}
+              alt={mannWeib.title}
+              className="w-full max-w-[220px] md:max-w-[240px] h-auto object-contain"
+            />
+          </div>
           <div className="p-6 md:p-8 flex flex-col justify-center">
-            <h3 className="font-display text-2xl text-[var(--color-navy)] mb-1">
-              {mannWeib.title}
-            </h3>
-            <p className="text-[var(--color-maroon)] font-semibold text-sm tracking-wide uppercase mb-3">
-              {mannWeib.tagline}
-            </p>
             <p className="text-stone-600 text-sm leading-relaxed mb-5">
               {mannWeib.text}
             </p>
-            <ProjectLink href={`/projekte/${mannWeib.slug}`} />
+            <div>
+              <ProjectButton href={`/projekte/${mannWeib.slug}`} />
+            </div>
           </div>
         </div>
 
@@ -127,23 +144,19 @@ export default function Home() {
               key={p.slug}
               className="rounded-2xl overflow-hidden border border-stone-200 bg-white flex flex-col"
             >
-              <img
-                src={p.image}
-                alt={p.title}
-                className="w-full aspect-[4/3] object-cover object-top"
-              />
+              <div className="flex items-center justify-center p-5 bg-stone-50">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full max-w-[200px] h-auto object-contain"
+                />
+              </div>
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">
-                  {p.title}
-                </h3>
-                <p className="text-[var(--color-maroon)] font-medium text-sm mb-3">
-                  {p.tagline}
-                </p>
                 <p className="text-stone-600 text-sm leading-relaxed mb-5">
                   {p.text}
                 </p>
                 <div className="mt-auto">
-                  <ProjectLink href={`/projekte/${p.slug}`} />
+                  <ProjectButton href={`/projekte/${p.slug}`} />
                 </div>
               </div>
             </div>
@@ -153,7 +166,7 @@ export default function Home() {
         <div className="flex justify-end">
           <Link
             href="/projekte"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-navy)] hover:gap-2.5 transition-all"
+            className="inline-flex items-center gap-1.5 rounded-full border border-stone-300 bg-white text-[var(--color-navy)] text-sm font-medium px-4 py-2 hover:border-[var(--color-navy)] transition-colors"
           >
             Weitere Projekte <span aria-hidden>→</span>
           </Link>
@@ -174,14 +187,20 @@ export default function Home() {
             <img
               src={team[0].image}
               alt={team[0].name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-3"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-xl object-cover mb-3"
             />
             <h3 className="font-display text-base text-[var(--color-navy)]">
               {team[0].name}
             </h3>
-            <p className="text-xs text-[var(--color-maroon)] font-medium">
+            <p className="text-xs text-[var(--color-maroon)] font-medium mb-1">
               {team[0].role}
             </p>
+            <Link
+              href="/ueber-uns"
+              className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
+            >
+              Mehr über Tilo →
+            </Link>
           </div>
 
           <img
@@ -194,14 +213,20 @@ export default function Home() {
             <img
               src={team[1].image}
               alt={team[1].name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-3"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-xl object-cover mb-3"
             />
             <h3 className="font-display text-base text-[var(--color-navy)]">
               {team[1].name}
             </h3>
-            <p className="text-xs text-[var(--color-maroon)] font-medium">
+            <p className="text-xs text-[var(--color-maroon)] font-medium mb-1">
               {team[1].role}
             </p>
+            <Link
+              href="/ueber-uns"
+              className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
+            >
+              Mehr über Karen →
+            </Link>
           </div>
         </div>
       </section>
