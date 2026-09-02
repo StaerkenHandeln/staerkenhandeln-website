@@ -52,6 +52,21 @@ export default async function ProjectDetail({
           </Link>
         </div>
       </div>
+
+      {project.video && (
+        <div className="mt-12">
+          <div className="rounded-xl overflow-hidden border border-stone-200 bg-[var(--color-navy)]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-auto block"
+            >
+              <source src={project.video} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

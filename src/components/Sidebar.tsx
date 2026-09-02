@@ -13,6 +13,11 @@ const links = [
   { href: "/kontakt", label: "Kontakt", icon: MailIcon },
 ];
 
+const iconOnlyLogo =
+  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/45d6263ca_logo_icon_only_redwhite.png";
+const textOnlyLogo =
+  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/00f43e079_logo_text_only_redwhite.png";
+
 export default function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -22,11 +27,8 @@ export default function Sidebar() {
       {/* Mobile top bar */}
       <div className="md:hidden flex items-center justify-between bg-[var(--color-navy)] text-white px-4 h-16 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2">
-          <img
-            src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/56b1fec66_logo_wordmark_red_white.png"
-            alt="StärkenHandeln Logo"
-            className="h-9 w-auto object-contain"
-          />
+          <img src={iconOnlyLogo} alt="" className="h-8 w-auto object-contain" />
+          <img src={textOnlyLogo} alt="StärkenHandeln" className="h-6 w-auto object-contain" />
         </Link>
         <button
           onClick={() => setOpen(!open)}
@@ -44,59 +46,39 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         className={`
-          fixed md:sticky top-0 left-0 h-screen w-72 bg-[var(--color-navy)] text-white
-          flex flex-col justify-between z-40 transition-transform duration-200
+          fixed md:sticky top-0 left-0 h-screen w-64 bg-[var(--color-navy)] text-white
+          flex flex-col z-40 transition-transform duration-200
           ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0
         `}
       >
-        <div>
-          <div className="px-4 pt-8 pb-6 hidden md:block">
-            <Link href="/" onClick={() => setOpen(false)}>
-              <img
-                src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/56b1fec66_logo_wordmark_red_white.png"
-                alt="StärkenHandeln Logo"
-                className="w-full object-contain"
-              />
-            </Link>
-          </div>
-
-          <nav className="mt-4 md:mt-2 px-4 space-y-1">
-            {links.map((l) => {
-              const active = pathname === l.href;
-              const Icon = l.icon;
-              return (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                    active
-                      ? "bg-[var(--color-maroon)] text-white"
-                      : "text-blue-100/80 hover:bg-white/10 hover:text-white"
-                  }`}
-                >
-                  <Icon className="w-5 h-5 flex-shrink-0" />
-                  {l.label}
-                </Link>
-              );
-            })}
-          </nav>
+        <div className="px-4 pt-8 pb-6 hidden md:flex flex-col items-center">
+          <Link href="/" onClick={() => setOpen(false)} className="flex flex-col items-center gap-2">
+            <img src={iconOnlyLogo} alt="" className="h-14 w-auto object-contain" />
+            <img src={textOnlyLogo} alt="StärkenHandeln" className="w-40 object-contain" />
+          </Link>
         </div>
 
-        <div className="px-6 pb-8 text-sm">
-          <div className="flex items-center gap-2 text-blue-100/70 mb-6">
-            <PinIcon className="w-4 h-4" />
-            <span>Wien, Österreich</span>
-          </div>
-          <p className="leading-relaxed font-display text-base">
-            <span className="text-[var(--color-maroon)]">Stärken.</span>
-            <br />
-            <span className="text-[var(--color-blue)]">Verbinden.</span>
-            <br />
-            <span className="text-[var(--color-gold)]">Handeln.</span>
-          </p>
-          <HeartIcon className="w-4 h-4 mt-4 text-blue-100/50" />
-        </div>
+        <nav className="mt-2 px-4 space-y-1">
+          {links.map((l) => {
+            const active = pathname === l.href;
+            const Icon = l.icon;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-[var(--color-maroon)] text-white"
+                    : "text-blue-100/80 hover:bg-white/10 hover:text-white"
+                }`}
+              >
+                <Icon className="w-5 h-5 flex-shrink-0" />
+                {l.label}
+              </Link>
+            );
+          })}
+        </nav>
       </aside>
 
       {/* Mobile overlay */}
@@ -155,21 +137,6 @@ function MailIcon(props: React.SVGProps<SVGSVGElement>) {
     <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="M3 7l9 6 9-6" />
-    </svg>
-  );
-}
-function PinIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
-      <circle cx="12" cy="9" r="2.5" />
-    </svg>
-  );
-}
-function HeartIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 21s-8-5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6-8 11-8 11z" />
     </svg>
   );
 }

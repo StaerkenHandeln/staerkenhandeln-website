@@ -6,6 +6,7 @@ export type Project = {
   text: string;
   detail: string;
   accent: "maroon" | "navy";
+  video?: string;
 };
 
 export const projects: Project[] = [
@@ -19,6 +20,8 @@ export const projects: Project[] = [
     detail:
       "„Die 7 Seelen“ ist ein Raum für Männer und Väter, die den Verlust eines Kindes erlebt haben. Oft bleibt die Trauer von Vätern unsichtbar – dieses Projekt gibt ihr eine Stimme, schafft Begegnung mit anderen Betroffenen und hilft, Trauer, Verbindung und Heilung sichtbar zu machen.",
     accent: "maroon",
+    video:
+      "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Die7Seelen_Kurzvideo_Webseite.mp4",
   },
   {
     slug: "mann-weib-in-einigkeit",
@@ -30,6 +33,8 @@ export const projects: Project[] = [
     detail:
       "Ein bewussteres Miteinander zwischen Mann, Weib und den kommenden Generationen. Das Projekt öffnet Raum für Begegnung, ehrlichen Austausch und ein tieferes Verständnis zwischen den Polaritäten – für mehr Einigkeit in Beziehung und Gemeinschaft.",
     accent: "maroon",
+    video:
+      "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Mann_und_Weib_final_neue_saubere_Tonspur.mp4",
   },
   {
     slug: "klangvoll-leben",
@@ -41,5 +46,7 @@ export const projects: Project[] = [
     detail:
       "Ein Raum zum Lauschen, Wahrnehmen und bei sich Ankommen. Mit Klang, Frequenz und Klangschalen begleitet Karen Hagen Menschen dabei, wieder in Harmonie mit sich selbst zu kommen – in Einzelsitzungen und gemeinsamen Klangreisen.",
     accent: "maroon",
+    video:
+      "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Klangvoll_leben_Webvideo_mit_Logo.mp4",
   },
 ];

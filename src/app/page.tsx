@@ -25,6 +25,9 @@ const team = [
 const symbolLogo =
   "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png";
 
+const heroImage =
+  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/85c94da7f_hero_ref.png";
+
 const mannWeib = projects.find((p) => p.slug === "mann-weib-in-einigkeit")!;
 const die7Seelen = projects.find((p) => p.slug === "die-7-seelen")!;
 const klangvollLeben = projects.find((p) => p.slug === "klangvoll-leben")!;
@@ -35,8 +38,8 @@ export default function Home() {
       {/* Hero */}
       <section className="relative">
         <img
-          src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c7da82c54_4c60f64c3_Herobildfinish.png"
-          alt="Raum für Menschen. Raum für Ideen. Raum zum Wirken. Das StärkenHandeln-Zeichen steht auf einem Felsen im Sonnenaufgang über Bergen und einem See."
+          src={heroImage}
+          alt="Raum für Menschen. Raum für Ideen. Raum zum Wirken. Das original StärkenHandeln-Zeichen im Sonnenaufgang über Bergen und einem See."
           className="w-full h-auto object-cover"
         />
         <h1 className="sr-only">
@@ -53,29 +56,24 @@ export default function Home() {
       {/* Video */}
       <section className="max-w-5xl mx-auto px-6 md:px-12 -mt-4 md:-mt-6">
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-white">
-          <div
-            className="relative aspect-[16/7] flex items-center justify-center"
-            style={{
-              background:
-                "radial-gradient(circle at 60% 35%, #24406e 0%, #132445 45%, #0a1530 100%)",
-            }}
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full h-auto block bg-[var(--color-navy)]"
           >
-            <button
-              aria-label="Video abspielen"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/95 flex items-center justify-center hover:scale-105 transition-transform"
-            >
-              <svg width="26" height="26" viewBox="0 0 24 24" className="md:w-8 md:h-8">
-                <path d="M8 5v14l11-7z" fill="var(--color-navy)" />
-              </svg>
-            </button>
-          </div>
+            <source
+              src="https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/StaerkenHandeln_Vorstellungsvideo_V1%20(1).mp4"
+              type="video/mp4"
+            />
+          </video>
           <div className="px-6 py-5 text-center">
-            <h3 className="font-display text-lg text-[var(--color-navy)]">
-              StärkenHandeln in 2 Minuten
+            <h3 className="font-display text-lg">
+              <span className="text-[var(--color-maroon)]">Stärken</span>
+              <span className="text-[var(--color-navy)]">Handeln</span>{" "}
+              <span className="text-[var(--color-blue)]">Entdecken</span>
             </h3>
-            <p className="text-sm text-stone-500 mt-1">
-              Lerne uns, unsere Haltung und unsere Vision kennen.
-            </p>
+            <div className="mx-auto mt-2 h-[2px] w-16 bg-gradient-to-r from-[var(--color-maroon)] to-[var(--color-blue)] rounded-full" />
           </div>
         </div>
       </section>
@@ -114,55 +112,37 @@ export default function Home() {
       <WaveDivider className="mt-2" />
 
       {/* Team */}
-      <section className="relative overflow-hidden py-4">
-        {/* Side-swept red / blue accent waves */}
+      <section className="relative overflow-hidden py-10">
+        {/* Fine decorative accent lines only (no large color fills) */}
         <svg
           aria-hidden="true"
           className="pointer-events-none select-none absolute inset-0 w-full h-full"
           viewBox="0 0 1200 400"
           preserveAspectRatio="none"
         >
-          <defs>
-            <linearGradient id="teamRed" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="var(--color-maroon)" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="var(--color-maroon)" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient id="teamBlue" x1="100%" y1="0%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="var(--color-blue)" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="var(--color-blue)" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 400 C 120 300, 60 180, 220 120 C 340 75, 300 20, 460 0 L 0 0 Z"
-            fill="url(#teamRed)"
-          />
           <path
             d="M0 340 C 160 260, 140 160, 300 130 C 420 105, 400 40, 520 10"
             fill="none"
             stroke="var(--color-maroon)"
             strokeWidth="2"
-            opacity="0.35"
-          />
-          <path
-            d="M1200 400 C 1080 300, 1140 180, 980 120 C 860 75, 900 20, 740 0 L 1200 0 Z"
-            fill="url(#teamBlue)"
+            opacity="0.3"
           />
           <path
             d="M1200 340 C 1040 260, 1060 160, 900 130 C 780 105, 800 40, 680 10"
             fill="none"
             stroke="var(--color-blue)"
             strokeWidth="2"
-            opacity="0.35"
+            opacity="0.3"
           />
         </svg>
 
-        <div className="relative max-w-3xl mx-auto px-6 md:px-12 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="font-display text-3xl text-[var(--color-navy)] mb-2">
             Die Menschen hinter StärkenHandeln
           </h2>
-          <p className="text-stone-500 mb-10">Verantwortung hat ein Gesicht.</p>
+          <p className="text-stone-500 mb-12">Verantwortung hat ein Gesicht.</p>
 
-          <div className="flex items-start justify-center gap-6 md:gap-12 flex-wrap">
+          <div className="flex items-start justify-center gap-10 md:gap-24 flex-wrap">
             <div className="flex flex-col items-center w-44 md:w-52">
               <img
                 src={team[0].image}
@@ -189,7 +169,7 @@ export default function Home() {
             <img
               src={symbolLogo}
               alt="StärkenHandeln Zeichen"
-              className="w-10 h-10 md:w-12 md:h-12 object-contain mt-8 shrink-0"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain mt-6 shrink-0"
             />
 
             <div className="flex flex-col items-center w-44 md:w-52">
