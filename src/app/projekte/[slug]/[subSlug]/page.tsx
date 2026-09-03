@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
+import { ParagraphBlock } from "@/components/ParagraphBlock";
 
 export function generateStaticParams() {
   const params: { slug: string; subSlug: string }[] = [];
@@ -53,12 +54,7 @@ export default async function SubProjectDetail({
         </h1>
         <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
         {paragraphs.map((para, i) => (
-          <p
-            key={i}
-            className="font-display italic text-amber-800/90 leading-relaxed text-[15px] md:text-base mb-4 whitespace-pre-line"
-          >
-            {para}
-          </p>
+          <ParagraphBlock key={i} text={para} />
         ))}
         <div className="mx-auto mt-8 h-px w-16 bg-amber-300" />
       </div>
