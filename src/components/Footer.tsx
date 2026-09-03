@@ -11,10 +11,10 @@ export default function Footer() {
             <img
               src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/2bd3125e7_c3a11b98d_SHLogoohneHG.png"
               alt="StärkenHandeln Logo"
-              className="h-20 w-auto object-contain mb-3"
+              className="h-32 w-auto object-contain mb-3"
             />
             <p className="text-sm text-stone-500">
-              Institut zur Förderung und Stärkung von individuellem Wachstum
+              StärkenHandeln ZVR-Zahl 1296206039
             </p>
           </div>
 
