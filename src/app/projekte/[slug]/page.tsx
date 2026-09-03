@@ -95,25 +95,24 @@ export default async function ProjectDetail({
         <div className="mt-16">
           <div
             className={
-              subProjects.length === 3
-                ? "grid md:grid-cols-3 gap-10 md:gap-8"
-                : "flex flex-wrap justify-center gap-10"
+              subProjects.length === 1
+                ? "grid grid-cols-1 max-w-sm mx-auto gap-10"
+                : subProjects.length === 2
+                ? "grid grid-cols-2 gap-6 md:gap-10"
+                : "grid grid-cols-3 gap-4 md:gap-8"
             }
           >
             {subProjects.map((sp) => (
-              <div
-                key={sp.position}
-                className={subProjects.length === 3 ? "" : "w-full max-w-sm"}
-              >
+              <div key={sp.position}>
                 <img
                   src={sp.image}
                   alt={sp.title}
-                  className="w-full aspect-[4/3] object-cover rounded-xl mb-5"
+                  className="w-full aspect-[4/3] object-cover rounded-xl mb-4"
                 />
-                <h3 className="font-display italic text-amber-800 text-lg text-center mb-3">
+                <h3 className="font-display italic text-amber-800 text-sm md:text-lg text-center mb-2 md:mb-3">
                   {sp.title}
                 </h3>
-                <p className="font-display italic text-amber-800/90 leading-relaxed text-sm text-center whitespace-pre-line">
+                <p className="font-display italic text-amber-800/90 leading-relaxed text-xs md:text-sm text-center whitespace-pre-line">
                   {sp.text}
                 </p>
               </div>
