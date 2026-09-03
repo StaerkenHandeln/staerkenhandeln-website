@@ -1,33 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase-client";
+
+const CONTACT_EMAIL = "hallo.staerkenhandeln@proton.me";
 
 export default function Kontakt() {
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSending(true);
-    setError(null);
-    try {
-      const { error: supabaseError } = await supabase.from("messages").insert({
-        name: form.name,
-        email: form.email,
-        message: form.message,
-      });
-      if (supabaseError) throw supabaseError;
-      setSubmitted(true);
-    } catch {
-      setError(
-        "Deine Nachricht konnte nicht gesendet werden. Bitte versuch es später erneut oder schreib uns direkt an hallo.staerkenhandeln@proton.me."
-      );
-    } finally {
-      setSending(false);
-    }
+    const subject = `Kontaktanfrage von ${form.name}`;
+    const body = `Name: ${form.name}\nE-Mail: ${form.email}\n\n${form.message}`;
+    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    setSubmitted(true);
   };
 
   return (
@@ -42,7 +29,7 @@ export default function Kontakt() {
         <div className="bg-white border border-stone-200 rounded-xl p-8 text-center">
           <h2 className="font-display text-2xl text-[var(--color-navy)] mb-2">Danke!</h2>
           <p className="text-stone-600">
-            Deine Nachricht wurde gesendet. Wir melden uns bald bei dir.
+            Dein Mailprogramm hat sich mit deiner Nachricht an uns geöffnet. Bitte sende die E-Mail dort ab.
           </p>
         </div>
       ) : (
@@ -77,13 +64,11 @@ export default function Kontakt() {
               className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-[var(--color-maroon)] focus:border-[var(--color-maroon)] outline-none resize-none"
             />
           </div>
-          {error && <p className="text-sm text-red-600">{error}</p>}
           <button
             type="submit"
-            disabled={sending}
-            className="w-full bg-[var(--color-maroon)] text-white font-semibold py-3 rounded-lg hover:bg-[var(--color-maroon-dark)] transition-colors disabled:opacity-60"
+            className="w-full bg-[var(--color-maroon)] text-white font-semibold py-3 rounded-lg hover:bg-[var(--color-maroon-dark)] transition-colors"
           >
-            {sending ? "Wird gesendet..." : "Senden"}
+            Senden
           </button>
         </form>
       )}
