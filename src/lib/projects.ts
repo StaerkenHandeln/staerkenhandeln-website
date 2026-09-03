@@ -7,6 +7,7 @@ export type Project = {
   detail: string;
   accent: "maroon" | "navy";
   video?: string;
+  poem?: string;
 };
 
 export const projects: Project[] = [
@@ -48,5 +49,7 @@ export const projects: Project[] = [
     accent: "maroon",
     video:
       "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Klangvoll_leben_Webvideo_mit_Logo.mp4",
+    poem:
+      "♡ Wenn Klang dich wieder nach Hause führt ♡\n\nInmitten der vielen Frequenzen unseres Alltags helfen dir Klangreisen zurück in deine eigene Schwingung – wie ein Orchester, das seine harmonische Komposition wiederfindet.\n\nManche spüren tiefe Entspannung, Wärme oder Stille. Danach oft: Leichtigkeit, Klarheit, ein inneres Aufatmen.\n\nPlanetenklangschalen begleiten dich dabei – jede mit ihrer eigenen Qualität: erdend, öffnend, tragend, weitend. Achtsam und traumasensibel, in deinem Tempo.\n\n♡ Schließe die Augen. Atme. Spüre. ♡\nUnd vielleicht hörst du wieder dich selbst.\n\nIn liebevoller Begleitung,\nKaren ♡ Klangvoll leben",
   },
 ];

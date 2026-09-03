@@ -22,6 +22,8 @@ export default async function ProjectDetail({
   const accentBgHover =
     project.accent === "navy" ? "hover:bg-[var(--color-navy-light)]" : "hover:bg-[var(--color-maroon-dark)]";
 
+  const poemParagraphs = project.poem?.split("\n\n") ?? [];
+
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
       <Link
@@ -65,6 +67,21 @@ export default async function ProjectDetail({
               <source src={project.video} type="video/mp4" />
             </video>
           </div>
+        </div>
+      )}
+
+      {poemParagraphs.length > 0 && (
+        <div className="mt-14 max-w-xl mx-auto text-center">
+          <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
+          {poemParagraphs.map((para, i) => (
+            <p
+              key={i}
+              className="font-display italic text-amber-800/90 leading-relaxed text-[15px] md:text-base mb-4 whitespace-pre-line"
+            >
+              {para}
+            </p>
+          ))}
+          <div className="mx-auto mt-8 h-px w-16 bg-amber-300" />
         </div>
       )}
     </div>
