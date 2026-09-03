@@ -51,11 +51,8 @@ export default function Footer() {
                 <a href="#" aria-label="Facebook" className="hover:text-[var(--color-maroon)] transition-colors">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.5.3v2.7h-1.4c-1.4 0-1.7.6-1.7 1.6V12h3l-.4 2.9h-2.6v7A10 10 0 0 0 22 12z"/></svg>
                 </a>
-                <a href="#" aria-label="Instagram" className="hover:text-[var(--color-maroon)] transition-colors">
+                <a href="https://www.instagram.com/staerkenhandeln/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[var(--color-maroon)] transition-colors">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.1 0 4.2.1 1.1 0 1.8.2 2.4.5.6.2 1.1.5 1.6 1 .5.5.8 1 1 1.6.3.6.4 1.3.5 2.4.1 1.1.1 1.5.1 4.2s0 3.1-.1 4.2c0 1.1-.2 1.8-.5 2.4-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6 1-.6.3-1.3.4-2.4.5-1.1.1-1.5.1-4.2.1s-3.1 0-4.2-.1c-1.1 0-1.8-.2-2.4-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-1-1.6-.3-.6-.4-1.3-.5-2.4C2 15.1 2 14.7 2 12s0-3.1.1-4.2c0-1.1.2-1.8.5-2.4.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-1 .6-.3 1.3-.4 2.4-.5C8.9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
-                </a>
-                <a href="#" aria-label="X" className="hover:text-[var(--color-maroon)] transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h4.6l4 5.4L16.4 3H21l-6.7 7.9L21.4 21H16.8l-4.4-6-5.4 6H2.4l7.2-8.4L3 3z"/></svg>
                 </a>
               </div>
             </div>
