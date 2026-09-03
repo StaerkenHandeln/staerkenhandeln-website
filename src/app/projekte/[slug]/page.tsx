@@ -6,6 +6,8 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
+const positionOrder = { left: 0, middle: 1, right: 2 } as const;
+
 export default async function ProjectDetail({
   params,
 }: {
@@ -23,6 +25,10 @@ export default async function ProjectDetail({
     project.accent === "navy" ? "hover:bg-[var(--color-navy-light)]" : "hover:bg-[var(--color-maroon-dark)]";
 
   const poemParagraphs = project.poem?.split("\n\n") ?? [];
+
+  const subProjects = [...(project.subProjects ?? [])].sort(
+    (a, b) => positionOrder[a.position] - positionOrder[b.position]
+  );
 
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
@@ -82,6 +88,37 @@ export default async function ProjectDetail({
             </p>
           ))}
           <div className="mx-auto mt-8 h-px w-16 bg-amber-300" />
+        </div>
+      )}
+
+      {subProjects.length > 0 && (
+        <div className="mt-16">
+          <div
+            className={
+              subProjects.length === 3
+                ? "grid md:grid-cols-3 gap-10 md:gap-8"
+                : "flex flex-wrap justify-center gap-10"
+            }
+          >
+            {subProjects.map((sp) => (
+              <div
+                key={sp.position}
+                className={subProjects.length === 3 ? "" : "w-full max-w-sm"}
+              >
+                <img
+                  src={sp.image}
+                  alt={sp.title}
+                  className="w-full aspect-[4/3] object-cover rounded-xl mb-5"
+                />
+                <h3 className="font-display italic text-amber-800 text-lg text-center mb-3">
+                  {sp.title}
+                </h3>
+                <p className="font-display italic text-amber-800/90 leading-relaxed text-sm text-center whitespace-pre-line">
+                  {sp.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
