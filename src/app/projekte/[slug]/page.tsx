@@ -50,7 +50,7 @@ export default async function ProjectDetail({
             {project.title}
           </h1>
           <p className={`font-medium mb-6 ${accentText}`}>{project.tagline}</p>
-          <p className="text-stone-600 leading-relaxed mb-8">{project.detail}</p>
+          <p className="font-display italic text-amber-800/90 leading-relaxed text-[15px] md:text-base mb-8">{project.detail}</p>
 
           <Link
             href="/kontakt"
