@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row md:items-start gap-10">
           <div className="flex flex-col items-start text-left md:w-72 flex-shrink-0">
             <img
-              src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/7e9021208_96e1b11fe_SH_Logo_Hellblau_originalgetreu.png"
+              src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/2bd3125e7_c3a11b98d_SHLogoohneHG.png"
               alt="StärkenHandeln Logo"
               className="h-20 w-auto object-contain mb-3"
             />
