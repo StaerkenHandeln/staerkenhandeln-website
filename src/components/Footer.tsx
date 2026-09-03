@@ -37,8 +37,7 @@ export default function Footer() {
                 Kontakt
               </h3>
               <ul className="space-y-2 text-sm text-stone-500">
-                <li>office@staerkenhandeln.at</li>
-                <li>+43 677 625 16 22</li>
+                <li>hallo.staerkenhandeln@proton.me</li>
                 <li>Wien, Österreich</li>
               </ul>
             </div>
@@ -48,11 +47,14 @@ export default function Footer() {
                 Folge uns
               </h3>
               <div className="flex gap-3 text-[var(--color-navy)]">
-                <a href="#" aria-label="Facebook" className="hover:text-[var(--color-maroon)] transition-colors">
+                <a href="https://www.facebook.com/share/1H554rVyD3/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[var(--color-maroon)] transition-colors">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.5.3v2.7h-1.4c-1.4 0-1.7.6-1.7 1.6V12h3l-.4 2.9h-2.6v7A10 10 0 0 0 22 12z"/></svg>
                 </a>
                 <a href="https://www.instagram.com/staerkenhandeln/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[var(--color-maroon)] transition-colors">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.1 0 4.2.1 1.1 0 1.8.2 2.4.5.6.2 1.1.5 1.6 1 .5.5.8 1 1 1.6.3.6.4 1.3.5 2.4.1 1.1.1 1.5.1 4.2s0 3.1-.1 4.2c0 1.1-.2 1.8-.5 2.4-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6 1-.6.3-1.3.4-2.4.5-1.1.1-1.5.1-4.2.1s-3.1 0-4.2-.1c-1.1 0-1.8-.2-2.4-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-1-1.6-.3-.6-.4-1.3-.5-2.4C2 15.1 2 14.7 2 12s0-3.1.1-4.2c0-1.1.2-1.8.5-2.4.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-1 .6-.3 1.3-.4 2.4-.5C8.9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+                </a>
+                <a href="https://t.me/StaerkenHandeln" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="hover:text-[var(--color-maroon)] transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.64 6.8-1.55 7.3c-.12.53-.42.66-.85.41l-2.35-1.73-1.13 1.09c-.13.13-.24.24-.48.24l.17-2.43 4.42-4c.19-.17-.04-.27-.3-.1l-5.46 3.44-2.35-.74c-.51-.16-.52-.51.11-.76l9.2-3.55c.42-.16.79.1.57 1.83z"/></svg>
                 </a>
               </div>
             </div>

@@ -23,7 +23,7 @@ export default function Kontakt() {
       setSubmitted(true);
     } catch {
       setError(
-        "Deine Nachricht konnte nicht gesendet werden. Bitte versuch es später erneut oder schreib uns direkt an office@staerkenhandeln.at."
+        "Deine Nachricht konnte nicht gesendet werden. Bitte versuch es später erneut oder schreib uns direkt an hallo.staerkenhandeln@proton.me."
       );
     } finally {
       setSending(false);
@@ -89,8 +89,7 @@ export default function Kontakt() {
       )}
 
       <div className="mt-10 text-sm text-stone-500 space-y-1">
-        <p>office@staerkenhandeln.at</p>
-        <p>+43 677 625 16 22</p>
+        <p>hallo.staerkenhandeln@proton.me</p>
         <p>Wien, Österreich</p>
       </div>
     </div>
