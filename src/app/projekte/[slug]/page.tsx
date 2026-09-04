@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import { ParagraphBlock } from "@/components/ParagraphBlock";
+import { GridCardText } from "@/components/GridCardText";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -112,9 +113,7 @@ export default async function ProjectDetail({
                 <h3 className="font-display italic text-amber-800 text-sm md:text-lg text-center mb-2 md:mb-3">
                   {sp.title}
                 </h3>
-                <p className="font-display italic text-amber-800/90 leading-relaxed text-xs md:text-sm text-center whitespace-pre-line">
-                  {sp.text}
-                </p>
+                <GridCardText text={sp.text} />
               </div>
             ))}
           </div>
