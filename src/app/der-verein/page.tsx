@@ -3,7 +3,7 @@ export default function DerVerein() {
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
       <h1 className="font-display text-4xl text-[var(--color-navy)] mb-8">Der Verein</h1>
 
-      <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Vorstand</h2>
+      <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Präsidium</h2>
       <div className="grid md:grid-cols-2 gap-6 mb-10">
         <div className="bg-white border border-stone-200 rounded-xl p-6 flex gap-5 items-center">
           <img
