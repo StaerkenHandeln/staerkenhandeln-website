@@ -6,7 +6,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 const team = [
   {
     image:
-      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/6f4e1a71a_37bced5a4_WhatsAppImage2026-08-28at201412.jpg",
+      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/b0cce7bf7_WhatsAppImage2026-08-28at201412.jpeg",
     name: "Tilo Juncken",
     role: "Präsident",
     bio: "Initiator von StärkenHandeln und der Projekte. Sein Anliegen ist es, Menschen Raum zu geben, ihre Fähigkeiten zu entfalten und neue Wege zu gehen.",
@@ -14,7 +14,7 @@ const team = [
   },
   {
     image:
-      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/aca8b77ca_70e14c604_ChatGPTImage28Aug202614_22_50.png",
+      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/a981e2b71_ChatGPTImage28Aug202614_22_50.png",
     name: "Karen Hagen",
     role: "Vizepräsidentin",
     bio: 'Mit "Klangvoll leben" bringt sie Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln.',
