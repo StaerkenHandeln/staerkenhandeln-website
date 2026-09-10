@@ -14,7 +14,7 @@ const team = [
   },
   {
     image:
-      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/a981e2b71_ChatGPTImage28Aug202614_22_50.png",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/cc3f5d134_eb475cfb7_ChatGPTImage28Aug202614_22_50.png",
     name: "Karen Hagen",
     role: "Vizepräsidentin",
     bio: "Mit „Klangvoll leben“ und ihren Herzensprojekten „Mann & Weib in Einigkeit“ und „Worte werden Wirklichkeit“ bringt Karen Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln.",
@@ -176,7 +176,7 @@ export default function Home() {
               <img
                 src={team[1].image}
                 alt={team[1].name}
-                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
               />
               <h3 className="font-display text-base text-[var(--color-navy)]">
                 {team[1].name}

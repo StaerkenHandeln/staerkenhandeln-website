@@ -83,7 +83,7 @@ export default function UeberUns() {
           </div>
           <div className="bg-[var(--color-cream)] rounded-xl p-6 flex gap-5 items-center">
             <img
-              src="https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/a981e2b71_ChatGPTImage28Aug202614_22_50.png"
+              src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/cc3f5d134_eb475cfb7_ChatGPTImage28Aug202614_22_50.png"
               alt="Karen Hagen"
               className="w-20 h-20 rounded-full object-cover"
             />
