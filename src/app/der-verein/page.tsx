@@ -3,12 +3,6 @@ export default function DerVerein() {
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
       <h1 className="font-display text-4xl text-[var(--color-navy)] mb-8">Der Verein</h1>
 
-      <p className="text-stone-600 leading-relaxed mb-8">
-        StärkenHandeln e.V. ist ein Institut zur Förderung und Stärkung von individuellem
-        Wachstum mit Sitz in Wien, Österreich. Wir schaffen Raum für Menschen, Ideen und
-        Wirken – durch Beratung, Begegnung und gemeinsame Projekte.
-      </p>
-
       <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Vorstand</h2>
       <div className="grid md:grid-cols-2 gap-6 mb-10">
         <div className="bg-white border border-stone-200 rounded-xl p-6 flex gap-5 items-center">
