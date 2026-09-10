@@ -25,14 +25,14 @@ export default function WaveDivider({
         <path
           d="M0 65 C 220 35, 420 95, 640 55 S 980 35, 1200 65"
           fill="none"
-          stroke="var(--color-blue)"
+          stroke="var(--color-navy)"
           strokeWidth="2.5"
           opacity="0.22"
         />
         <path
           d="M0 45 C 300 70, 500 10, 760 40 S 1040 60, 1200 40"
           fill="none"
-          stroke="var(--color-gold)"
+          stroke="var(--color-maroon)"
           strokeWidth="1.5"
           opacity="0.18"
         />

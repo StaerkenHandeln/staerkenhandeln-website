@@ -23,7 +23,7 @@ const team = [
 ];
 
 const symbolLogo =
-  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c15d3cf86_106f0378c_SH_Logo_nur_Zeichnung_hellblau_transparent.png";
+  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/6843ecd33_hexagon_recolored_preview.png";
 
 const heroImage =
   "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/85c94da7f_hero_ref.png";
@@ -130,7 +130,7 @@ export default function Home() {
           <path
             d="M1200 340 C 1040 260, 1060 160, 900 130 C 780 105, 800 40, 680 10"
             fill="none"
-            stroke="var(--color-blue)"
+            stroke="var(--color-navy)"
             strokeWidth="2"
             opacity="0.3"
           />
