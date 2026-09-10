@@ -11,6 +11,7 @@ export type Project = {
   initiator?: {
     name: string;
     role: string;
+    image?: string;
   };
   subProjects?: {
     position: "left" | "middle" | "right" | "bottom";
@@ -103,6 +104,8 @@ export const projects: Project[] = [
     initiator: {
       name: "Nicole",
       role: "Initiatorin von WildWiesenWissen",
+      image:
+        "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/1b7e1f8ad_15325df63_image.png",
     },
   },
 ];

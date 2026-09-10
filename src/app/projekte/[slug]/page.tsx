@@ -65,19 +65,27 @@ export default async function ProjectDetail({
 
           {project.initiator && (
             <div className="mt-8 bg-[var(--color-cream)] border border-stone-200 rounded-xl p-5 flex gap-4 items-center">
-              <div className="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center shrink-0">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="w-8 h-8 text-stone-400"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="8" r="3.5" />
-                  <path d="M4.5 20c1.5-4 4.5-6 7.5-6s6 2 7.5 6" strokeLinecap="round" />
-                </svg>
-              </div>
+              {project.initiator.image ? (
+                <img
+                  src={project.initiator.image}
+                  alt={project.initiator.name}
+                  className="w-16 h-16 rounded-full object-cover shrink-0"
+                />
+              ) : (
+                <div className="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center shrink-0">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 text-stone-400"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="3.5" />
+                    <path d="M4.5 20c1.5-4 4.5-6 7.5-6s6 2 7.5 6" strokeLinecap="round" />
+                  </svg>
+                </div>
+              )}
               <div>
                 <h3 className="font-semibold text-[var(--color-navy)]">{project.initiator.name}</h3>
                 <p className="text-sm text-[var(--color-maroon)]">{project.initiator.role}</p>
