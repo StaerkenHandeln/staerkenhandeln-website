@@ -68,7 +68,7 @@ export default function Footer() {
             <span className="text-[var(--color-gold)]">Handeln.</span>
           </p>
           <p className="text-xs text-stone-400 mt-2">
-            © {new Date().getFullYear()} StärkenHandeln e.V. — Alle Rechte vorbehalten
+            © {new Date().getFullYear()} StärkenHandeln. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>
