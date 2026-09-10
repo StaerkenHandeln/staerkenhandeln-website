@@ -113,31 +113,6 @@ export default function Home() {
 
       {/* Team */}
       <section className="relative overflow-hidden py-10">
-        {/* Fine decorative accent lines only (no large color fills) */}
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute inset-0 w-full h-full"
-          viewBox="0 0 1200 400"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 340 C 160 260, 140 160, 300 130 C 420 105, 400 40, 520 10"
-            fill="none"
-            stroke="var(--color-maroon)"
-            strokeWidth="4"
-            strokeLinecap="round"
-            opacity="0.8"
-          />
-          <path
-            d="M1200 340 C 1040 260, 1060 160, 900 130 C 780 105, 800 40, 680 10"
-            fill="none"
-            stroke="var(--color-navy)"
-            strokeWidth="4"
-            strokeLinecap="round"
-            opacity="0.75"
-          />
-        </svg>
-
         <div className="relative max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="font-display text-3xl text-[var(--color-navy)] mb-2">
             Die Menschen hinter StärkenHandeln

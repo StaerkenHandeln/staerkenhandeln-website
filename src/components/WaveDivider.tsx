@@ -13,23 +13,21 @@ export default function WaveDivider({
       <svg
         viewBox="0 0 1200 90"
         preserveAspectRatio="none"
-        className={`w-full h-16 md:h-24 ${flip ? "-scale-y-100" : ""}`}
+        className={`w-full h-16 md:h-20 ${flip ? "-scale-y-100" : ""}`}
       >
         <path
-          d="M0 60 C 220 5, 380 100, 600 40 S 1000 10, 1200 55"
+          d="M0 55 C 180 15, 340 85, 540 45 S 900 20, 1200 55"
           fill="none"
           stroke="var(--color-maroon)"
-          strokeWidth="4.5"
-          strokeLinecap="round"
-          opacity="0.85"
+          strokeWidth="2"
+          opacity="0.35"
         />
         <path
-          d="M0 75 C 260 25, 460 105, 700 50 S 1020 15, 1200 70"
+          d="M0 65 C 220 35, 420 95, 640 55 S 980 35, 1200 65"
           fill="none"
           stroke="var(--color-navy)"
-          strokeWidth="4.5"
-          strokeLinecap="round"
-          opacity="0.8"
+          strokeWidth="2"
+          opacity="0.32"
         />
       </svg>
     </div>
