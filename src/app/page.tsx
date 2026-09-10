@@ -17,7 +17,7 @@ const team = [
       "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/a981e2b71_ChatGPTImage28Aug202614_22_50.png",
     name: "Karen Hagen",
     role: "Vizepräsidentin",
-    bio: 'Mit "Klangvoll leben" bringt sie Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln.',
+    bio: "Mit „Klangvoll leben“ und ihren Herzensprojekten „Mann & Weib in Einigkeit“ und „Worte werden Wirklichkeit“ bringt Karen Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln.",
     linkLabel: "Mehr über Karen →",
   },
 ];
