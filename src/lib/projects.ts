@@ -44,7 +44,7 @@ export const projects: Project[] = [
       "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/516b652c8_ChatGPTImage29Aug202620_29_04.png",
     title: "Mann & Weib in Einigkeit",
     tagline: "Verbindung und Miteinander",
-    text: "Ein Projekt rund um Partnerschaft, Begegnung und das Zusammenspiel von Ich, Du und Wir, für mehr Verständnis im Miteinander und ehrliches Mitteilen.",
+    text: "Ein Projekt rund um Partnerschaft, Begegnung und das Zusammenspiel von Ich - Du - Wir, für mehr Verständnis im Miteinander und ehrliches Mitteilen.",
     detail:
       "Ein bewussteres Miteinander zwischen Mann, Weib und den kommenden Generationen. Das Projekt öffnet Raum für Begegnung, ehrlichen Austausch und ein tieferes Verständnis zwischen den Polaritäten für mehr Einigkeit in Partnerschaft und Gemeinschaft.",
     accent: "maroon",
