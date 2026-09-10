@@ -188,7 +188,7 @@ export default function Home() {
                 {team[1].bio}
               </p>
               <Link
-                href="/ueber-uns"
+                href="/ueber-uns#karen"
                 className="text-xs font-medium text-stone-500 hover:text-[var(--color-maroon)] transition-colors"
               >
                 {team[1].linkLabel}
