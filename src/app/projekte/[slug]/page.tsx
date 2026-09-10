@@ -47,7 +47,11 @@ export default async function ProjectDetail({
         <img
           src={project.image}
           alt={project.title}
-          className="w-full rounded-xl object-cover aspect-[2/3]"
+          className={
+            project.imageFit === "contain"
+              ? "w-full rounded-xl aspect-[2/3] object-contain bg-[var(--color-cream)] p-6"
+              : "w-full rounded-xl object-cover aspect-[2/3]"
+          }
         />
         <div>
           <h1 className="font-display text-3xl text-[var(--color-navy)] mb-2">

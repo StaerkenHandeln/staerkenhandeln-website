@@ -12,11 +12,16 @@ const posterImages: Record<string, string> = {
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5523241eb_789524c12_ChatGPTImage31Aug202613_53_39.png",
   "klangvoll-leben":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c88341cb7_449b1ad9f_ChatGPTImage31Aug202614_11_14.png",
+  "wildwiesenwissen":
+    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/9741cbc72_ea2243c9f_f897df37-6461-49b6-b8a9-e035b882455b.png",
 };
 
 // "Mann & Weib" already has its full text + button baked into the poster —
 // the whole card is simply a clickable image, nothing else needed.
-const selfContained = new Set(["mann-weib-in-einigkeit"]);
+// "WildWiesenWissen" uses a provisional badge graphic (title + tagline
+// already baked in) as a placeholder until final artwork is ready — same
+// full-image treatment, no cropping.
+const selfContained = new Set(["mann-weib-in-einigkeit", "wildwiesenwissen"]);
 
 export function ProjectCard({ project }: { project: Project }) {
   const image = posterImages[project.slug];

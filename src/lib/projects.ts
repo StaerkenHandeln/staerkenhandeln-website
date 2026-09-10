@@ -13,6 +13,7 @@ export type Project = {
     role: string;
     image?: string;
   };
+  imageFit?: "cover" | "contain";
   subProjects?: {
     position: "left" | "middle" | "right" | "bottom";
     image?: string;
@@ -94,7 +95,8 @@ export const projects: Project[] = [
   {
     slug: "wildwiesenwissen",
     image:
-      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/81412a131_wildwiesenwissen_platzhalter.jpg",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/9741cbc72_ea2243c9f_f897df37-6461-49b6-b8a9-e035b882455b.png",
+    imageFit: "contain",
     title: "WildWiesenWissen",
     tagline: "Die Natur wieder mit anderen Augen sehen.",
     text: "Die Natur wieder mit anderen Augen sehen.",
