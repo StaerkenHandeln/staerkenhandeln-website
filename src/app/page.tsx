@@ -6,7 +6,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 const team = [
   {
     image:
-      "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/b0cce7bf7_WhatsAppImage2026-08-28at201412.jpeg",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/cc3db7b8e_abc44c370_ChatGPTImage28Aug202620_12_42.png",
     name: "Tilo Juncken",
     role: "Präsident",
     bio: "Initiator von StärkenHandeln und der Projekte. Sein Anliegen ist es, Menschen Raum zu geben, ihre Fähigkeiten zu entfalten und neue Wege zu gehen.",
@@ -147,7 +147,7 @@ export default function Home() {
               <img
                 src={team[0].image}
                 alt={team[0].name}
-                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mb-3 border border-stone-200 shadow-sm"
               />
               <h3 className="font-display text-base text-[var(--color-navy)]">
                 {team[0].name}

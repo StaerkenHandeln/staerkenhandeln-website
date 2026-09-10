@@ -72,7 +72,7 @@ export default function UeberUns() {
         <div className="grid md:grid-cols-2 gap-6 mt-6">
           <div className="bg-[var(--color-cream)] rounded-xl p-6 flex gap-5 items-center">
             <img
-              src="https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/b0cce7bf7_WhatsAppImage2026-08-28at201412.jpeg"
+              src="https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/cc3db7b8e_abc44c370_ChatGPTImage28Aug202620_12_42.png"
               alt="Tilo Juncken"
               className="w-20 h-20 rounded-full object-cover"
             />
