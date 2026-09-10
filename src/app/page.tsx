@@ -124,15 +124,17 @@ export default function Home() {
             d="M0 340 C 160 260, 140 160, 300 130 C 420 105, 400 40, 520 10"
             fill="none"
             stroke="var(--color-maroon)"
-            strokeWidth="2"
-            opacity="0.3"
+            strokeWidth="4"
+            strokeLinecap="round"
+            opacity="0.8"
           />
           <path
             d="M1200 340 C 1040 260, 1060 160, 900 130 C 780 105, 800 40, 680 10"
             fill="none"
             stroke="var(--color-navy)"
-            strokeWidth="2"
-            opacity="0.3"
+            strokeWidth="4"
+            strokeLinecap="round"
+            opacity="0.75"
           />
         </svg>
 
