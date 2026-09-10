@@ -32,6 +32,36 @@ export function ProjectCard({ project }: { project: Project }) {
     );
   }
 
+  // Projects without a custom baked poster yet (e.g. still in Aufbau,
+  // final artwork pending): fall back to the plain project.image plus the
+  // title and tagline, same card shell as the other projects so the grid
+  // stays visually consistent.
+  if (!image) {
+    return (
+      <Link
+        href={`/projekte/${project.slug}`}
+        className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] hover:opacity-95 transition-opacity"
+      >
+        <div className="relative aspect-[16/9] w-full">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">
+            {project.title}
+          </h3>
+          <p className="text-sm text-stone-500 mb-3">{project.tagline}</p>
+          <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+            Projekt entdecken <span aria-hidden>→</span>
+          </span>
+        </div>
+      </Link>
+    );
+  }
+
   // "Die 7 Seelen" and "Klangvoll leben": same fixed landscape frame so both
   // cards match in size. The small "Projekt entdecken" button sits below
   // the artwork (not on top of it) so it never covers the baked-in title —
