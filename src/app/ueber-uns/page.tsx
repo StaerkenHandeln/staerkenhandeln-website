@@ -1,7 +1,21 @@
 export default function UeberUns() {
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-      <h1 className="font-display text-4xl text-[var(--color-navy)] mb-8">Über uns</h1>
+      <div id="karen" className="pb-10 mb-10 border-b border-stone-200">
+        <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Karen</h2>
+        <p className="text-stone-600 leading-relaxed mb-6">
+          Mit „Klangvoll leben“ bringt Karen Klang, Frequenz und achtsame Begleitung unter das
+          Dach von StärkenHandeln. Doch auch das eigene Leben hat Spuren hinterlassen. Erfahrungen,
+          Begegnungen und Schmerz, aus denen mit der Zeit etwas Neues wachsen durfte. So entstanden
+          die Herzensprojekte „Mann &amp; Weib in Einigkeit“ und „Worte werden Wirklichkeit“. Sie sind
+          aus dem Leben heraus gewachsen und aus dem tiefen Wunsch, Erlebtes in Bewusstsein,
+          Bewusstsein für einander, Frieden in Familie und etwas Wertvolles für uns und die Kinder
+          dieser Welt zu verwandeln.
+        </p>
+        <p className="font-display italic text-amber-800/90 leading-relaxed text-lg text-center">
+          Erfahrene sind die wertvollsten Begleter.
+        </p>
+      </div>
 
       <div className="prose prose-lg max-w-none">
         <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Unsere Vision</h2>
@@ -78,22 +92,6 @@ export default function UeberUns() {
               <p className="text-sm text-[var(--color-maroon)]">Vizepräsidentin</p>
             </div>
           </div>
-        </div>
-
-        <div id="karen" className="pt-10 mt-10 border-t border-stone-200">
-          <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Karen</h2>
-          <p className="text-stone-600 leading-relaxed mb-6">
-            Mit „Klangvoll leben“ bringt Karen Klang, Frequenz und achtsame Begleitung unter das
-            Dach von StärkenHandeln. Doch auch das eigene Leben hat Spuren hinterlassen. Erfahrungen,
-            Begegnungen und Schmerz, aus denen mit der Zeit etwas Neues wachsen durfte. So entstanden
-            die Herzensprojekte „Mann &amp; Weib in Einigkeit“ und „Worte werden Wirklichkeit“. Sie sind
-            aus dem Leben heraus gewachsen und aus dem tiefen Wunsch, Erlebtes in Bewusstsein,
-            Bewusstsein für einander, Frieden in Familie und etwas Wertvolles für uns und die Kinder
-            dieser Welt zu verwandeln.
-          </p>
-          <p className="font-display italic text-amber-800/90 leading-relaxed text-lg text-center">
-            Erfahrene sind die wertvollsten Begleter.
-          </p>
         </div>
       </div>
     </div>
