@@ -1,6 +1,16 @@
 const HEADING_PATTERN = /^♡.*♡$/;
+const BOLD_PATTERN = /^\*\*([\s\S]+)\*\*$/;
 
 export function GridCardText({ text }: { text: string }) {
+  const boldMatch = text.trim().match(BOLD_PATTERN);
+  if (boldMatch) {
+    return (
+      <p className="font-display not-italic text-amber-800 font-bold text-base md:text-lg text-center leading-relaxed whitespace-pre-line">
+        {boldMatch[1]}
+      </p>
+    );
+  }
+
   const lines = text.split("\n");
   const firstLine = lines[0]?.trim() ?? "";
   const isHeading = HEADING_PATTERN.test(firstLine);
