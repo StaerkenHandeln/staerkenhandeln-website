@@ -1,6 +1,25 @@
 export default function UeberUns() {
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
+      <h1 className="font-display text-3xl text-[var(--color-navy)] mb-10 text-center">
+        Über uns
+      </h1>
+
+      <div id="tilo" className="pb-10 mb-10 border-b border-stone-200">
+        <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Tilo</h2>
+        <p className="font-display italic text-stone-600 leading-relaxed">
+          Ich bin Tilo, Initiator und Präsident von Stärken Handeln. Mich treibt die Frage an, was
+          passiert, wenn Menschen wiederentdecken, was wirklich in ihnen steckt. Die Idee zu
+          Stärken Handeln kam aus dem Gedanken, jeder Mensch hat Stärken. Eine Person kann bauen,
+          eine andere kann zuhören, jemand sieht neue Wege. Wenn wir das teilen, entsteht etwas
+          Neues zwischen uns. Ich möchte Räume schaffen, in denen Menschen sich begegnen, ihre
+          Fähigkeiten entdecken und gemeinsam ins Tun kommen , nicht nur über Veränderung
+          sprechen, sondern sie wirklich leben. Mein Antrieb ist, Verantwortung für den eigenen
+          Weg zu übernehmen, Freiheit zu leben und echte Verbindung zu ermöglichen. Keiner von uns
+          kann alles, aber alle zusammen ziemlich viel.
+        </p>
+      </div>
+
       <div id="karen" className="pb-10 mb-10 border-b border-stone-200">
         <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Karen</h2>
         <p className="text-stone-600 leading-relaxed mb-6">
