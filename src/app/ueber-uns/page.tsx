@@ -7,7 +7,7 @@ export default function UeberUns() {
 
       <div id="tilo" className="pb-10 mb-10 border-b border-stone-200">
         <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Tilo</h2>
-        <p className="font-display italic text-stone-600 leading-relaxed">
+        <p className="text-stone-600 leading-relaxed mb-6">
           Ich bin Tilo, Initiator und Präsident von Stärken Handeln. Mich treibt die Frage an, was
           passiert, wenn Menschen wiederentdecken, was wirklich in ihnen steckt. Die Idee zu
           Stärken Handeln kam aus dem Gedanken, jeder Mensch hat Stärken. Eine Person kann bauen,
@@ -23,8 +23,9 @@ export default function UeberUns() {
       <div id="karen" className="pb-10 mb-10 border-b border-stone-200">
         <h2 className="font-display text-2xl text-[var(--color-maroon)] mb-4">Über Karen</h2>
         <p className="text-stone-600 leading-relaxed mb-6">
-          Mit „Klangvoll leben“ bringt Karen Klang, Frequenz und achtsame Begleitung unter das
-          Dach von StärkenHandeln. Doch auch das eigene Leben hat Spuren hinterlassen. Erfahrungen,
+          Mein Name ist Karen, Vizepräsidentin von StärkenHandeln. Mit „Klangvoll leben“ bringe
+          ich Klang, Frequenz und achtsame Begleitung unter das Dach von StärkenHandeln. Doch auch
+          das eigene Leben hat Spuren hinterlassen. Erfahrungen,
           Begegnungen und Schmerz, aus denen mit der Zeit etwas Neues wachsen durfte. So entstanden
           die Herzensprojekte „Mann &amp; Weib in Einigkeit“ und „Worte werden Wirklichkeit“. Sie sind
           aus dem Leben heraus gewachsen und aus dem tiefen Wunsch, Erlebtes in Bewusstsein,
