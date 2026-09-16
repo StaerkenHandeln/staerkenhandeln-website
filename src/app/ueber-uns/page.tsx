@@ -13,7 +13,7 @@ export default function UeberUns() {
           dieser Welt zu verwandeln.
         </p>
         <p className="font-display italic text-amber-800/90 leading-relaxed text-lg text-center">
-          Erfahrene sind die wertvollsten Begleter.
+          Erfahrene sind die wertvollsten Begleiter.
         </p>
       </div>
 
