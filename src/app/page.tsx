@@ -84,9 +84,9 @@ export default function Home() {
                 <h3 className="font-display text-lg">
                   <span className="text-[var(--color-maroon)]">Stärken</span>
                   <span className="text-[var(--color-navy)]">Handeln</span>{" "}
-                  <span className="text-[var(--color-blue)]">Entdecken</span>
+                  <span className="text-[var(--color-gold)]">Entdecken</span>
                 </h3>
-                <div className="mx-auto mt-2 h-[2px] w-16 bg-gradient-to-r from-[var(--color-maroon)] to-[var(--color-blue)] rounded-full" />
+                <div className="mx-auto mt-2 h-[2px] w-16 bg-gradient-to-r from-[var(--color-maroon)] to-[var(--color-gold)] rounded-full" />
               </div>
               <div className="hidden sm:block sm:order-3" />
             </div>
