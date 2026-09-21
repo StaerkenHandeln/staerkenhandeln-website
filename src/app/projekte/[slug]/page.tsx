@@ -37,7 +37,10 @@ export default async function ProjectDetail({
   // "Klangvoll leben": the intro passage (image, title, tagline, detail
   // text, contact button) is removed on this page — the video opens the
   // page instead, right under the back link.
-  const hideIntro = project.slug === "klangvoll-leben";
+  // "Worte werden Wirklichkeit": same idea — the round-logo intro passage
+  // is removed, the image+text block (bottom subProject) opens the page.
+  const hideIntro =
+    project.slug === "klangvoll-leben" || project.slug === "worte-werden-wirklichkeit";
 
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
