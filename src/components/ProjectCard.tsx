@@ -21,14 +21,14 @@ export function ProjectCard({ project }: { project: Project }) {
               alt={project.title}
               className="w-28 md:w-32 aspect-[2/3] object-cover rounded-xl"
             />
-            <span className="inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[var(--color-maroon)] text-white text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+            <span className="inline-flex items-center justify-center h-9 gap-1 whitespace-nowrap rounded-full bg-[var(--color-maroon)] text-white text-[11px] font-medium px-3 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
               Projekt entdecken <span aria-hidden>→</span>
             </span>
             {project.song && (
               <SongButton
                 src={project.song}
-                className="text-[11px] px-3 py-1.5"
-                iconClassName="w-5 h-5"
+                className="h-9 text-[11px] px-3"
+                iconClassName="w-5 h-6"
               />
             )}
           </div>
@@ -82,14 +82,14 @@ export function ProjectCard({ project }: { project: Project }) {
               {project.text}
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 py-2 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+              <span className="inline-flex items-center justify-center h-10 gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
                 Projekt entdecken <span aria-hidden>→</span>
               </span>
               {project.song && (
                 <SongButton
                   src={project.song}
-                  className="text-xs px-4 py-2"
-                  iconClassName="w-6 h-6"
+                  className="h-10 text-xs px-4"
+                  iconClassName="w-6 h-7"
                 />
               )}
             </div>

@@ -76,8 +76,8 @@ export default function Home() {
               <div className="order-2 sm:order-1 sm:justify-self-start">
                 <SongButton
                   src={vorstellungslied}
-                  className="text-xs px-4 py-2"
-                  iconClassName="w-6 h-6"
+                  className="h-10 text-xs px-4"
+                  iconClassName="w-6 h-7"
                 />
               </div>
               <div className="order-1 sm:order-2 text-center">
