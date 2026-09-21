@@ -164,21 +164,49 @@ export default async function ProjectDetail({
       {bottomSubProjects.map((sp) => {
         const pitchParagraphs = sp.text.split("\n\n");
         return (
-          <div key={sp.slug} className="mt-16 max-w-xl mx-auto text-center">
+          <div key={sp.slug} className="mt-16 max-w-4xl mx-auto">
             <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
-            <h3 className="font-display italic text-amber-800 text-lg md:text-xl mb-5">
-              {sp.title}
-            </h3>
-            {pitchParagraphs.map((para, i) => (
-              <ParagraphBlock key={i} text={para} />
-            ))}
-            {sp.slug && (
-              <Link
-                href={`/projekte/${project.slug}/${sp.slug}`}
-                className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors mt-4`}
-              >
-                Projekt entdecken
-              </Link>
+            {sp.image ? (
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <img
+                  src={sp.image}
+                  alt={sp.title}
+                  className="w-full rounded-xl object-cover aspect-square md:aspect-[4/5]"
+                />
+                <div className="text-center md:text-left">
+                  <h3 className="font-display italic text-amber-800 text-base md:text-lg mb-3">
+                    {sp.title}
+                  </h3>
+                  {pitchParagraphs.map((para, i) => (
+                    <ParagraphBlock key={i} text={para} compact />
+                  ))}
+                  {sp.slug && (
+                    <Link
+                      href={`/projekte/${project.slug}/${sp.slug}`}
+                      className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors mt-2`}
+                    >
+                      Projekt entdecken
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div className="text-center">
+                <h3 className="font-display italic text-amber-800 text-lg md:text-xl mb-5">
+                  {sp.title}
+                </h3>
+                {pitchParagraphs.map((para, i) => (
+                  <ParagraphBlock key={i} text={para} />
+                ))}
+                {sp.slug && (
+                  <Link
+                    href={`/projekte/${project.slug}/${sp.slug}`}
+                    className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors mt-4`}
+                  >
+                    Projekt entdecken
+                  </Link>
+                )}
+              </div>
             )}
             <div className="mx-auto mt-8 h-px w-16 bg-amber-300" />
           </div>

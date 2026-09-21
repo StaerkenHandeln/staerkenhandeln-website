@@ -88,6 +88,8 @@ export const projects: Project[] = [
       {
         position: "bottom",
         slug: "worte-werden-wirklichkeit",
+        image:
+          "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/035d9eb7e_worte_boy_illustration.png",
         title: "Worte werden Wirklichkeit",
         text:
           "♡ Worte werden Wirklichkeit ♡\nAuch Worte sind Frequenzen, die tief in uns wirken.\nWas wir sagen, hinterlässt Resonanz\nWir möchte Menschen dafür sensibilisieren, achtsam mit Sprache und Gedanken umzugehen in Familien, Partnerschaften, Freundschaften und besonders im Umgang mit Kindern.\nWelche Worte möchtest du in die Welt geben?\nUnd welche Worte dürfen in dir selbst neu entstehen?\n♡ Sprich so, dass Verbindung wachsen kann. ♡\n♡ Denke so, dass auch du darin ein Zuhause findest. ♡\n\n**Wir kommen dorthin, wo Worte wirken**",
