@@ -40,10 +40,8 @@ export default function Footer() {
                 <li>hallo.staerkenhandeln@proton.me</li>
                 <li>Wien, Österreich</li>
               </ul>
-            </div>
 
-            <div>
-              <h3 className="font-display font-semibold text-[var(--color-navy)] mb-3">
+              <h3 className="font-display font-semibold text-[var(--color-navy)] mb-3 mt-6">
                 Folge uns
               </h3>
               <div className="flex gap-3 text-[var(--color-navy)]">
@@ -57,6 +55,19 @@ export default function Footer() {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.64 6.8-1.55 7.3c-.12.53-.42.66-.85.41l-2.35-1.73-1.13 1.09c-.13.13-.24.24-.48.24l.17-2.43 4.42-4c.19-.17-.04-.27-.3-.1l-5.46 3.44-2.35-.74c-.51-.16-.52-.51.11-.76l9.2-3.55c.42-.16.79.1.57 1.83z"/></svg>
                 </a>
               </div>
+            </div>
+
+            <div>
+              <h3 className="font-display font-semibold text-[var(--color-navy)] mb-3">
+                Rechtliches
+              </h3>
+              <ul className="space-y-2 text-sm text-stone-500">
+                <li>Impressum</li>
+                <li>Datenschutz</li>
+                <li>Satzung</li>
+                <li>Beitragsordnung</li>
+                <li>Barrierefreiheit</li>
+              </ul>
             </div>
           </div>
         </div>
