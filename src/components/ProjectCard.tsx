@@ -13,13 +13,13 @@ export function ProjectCard({ project }: { project: Project }) {
         className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-gradient-to-br from-[var(--color-cream)] to-white hover:opacity-95 transition-opacity"
       >
         <div className="flex flex-row items-start gap-5 p-6 md:p-7">
-          <div className="flex flex-col items-center shrink-0 w-28 md:w-32">
+          <div className="flex flex-col items-center shrink-0">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full aspect-[2/3] object-cover rounded-xl"
+              className="w-28 md:w-32 aspect-[2/3] object-cover rounded-xl"
             />
-            <span className="mt-3 inline-flex items-center gap-1 rounded-full border border-[var(--color-maroon)] text-[var(--color-maroon)] text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon)] group-hover:text-white transition-colors">
+            <span className="mt-3 inline-flex items-center gap-1 whitespace-nowrap rounded-full border border-[var(--color-maroon)] text-[var(--color-maroon)] text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon)] group-hover:text-white transition-colors">
               Projekt entdecken <span aria-hidden>→</span>
             </span>
           </div>
