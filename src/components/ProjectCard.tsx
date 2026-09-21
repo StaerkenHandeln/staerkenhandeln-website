@@ -1,24 +1,18 @@
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
 
-// Final, user-approved landscape poster graphic (title + tagline baked
-// directly into the artwork). Used as-is, only fit to a shared landscape
-// frame.
-const posterImages: Record<string, string> = {
-  "klangvoll-leben":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c88341cb7_449b1ad9f_ChatGPTImage31Aug202614_11_14.png",
-};
-
 export function ProjectCard({ project }: { project: Project }) {
-  const image = posterImages[project.slug];
-
-  // "Mann & Weib in Einigkeit" and "Die 7 Seelen": bespoke side-by-side
-  // layout — the small logo artwork on the left, live text (title,
-  // tagline, description, button) on the right. Kept as real text (not
-  // baked into an image) so future wording changes always show up
-  // immediately, and the small logo keeps the card compact (no bigger
+  // "Mann & Weib in Einigkeit", "Die 7 Seelen" and "Klangvoll leben":
+  // bespoke side-by-side layout — the small logo artwork on the left, live
+  // text (title, tagline, description, button) on the right. Kept as real
+  // text (not baked into an image) so future wording changes always show
+  // up immediately, and the small logo keeps the card compact (no bigger
   // than the previous landscape card).
-  if (project.slug === "mann-weib-in-einigkeit" || project.slug === "die-7-seelen") {
+  if (
+    project.slug === "mann-weib-in-einigkeit" ||
+    project.slug === "die-7-seelen" ||
+    project.slug === "klangvoll-leben"
+  ) {
     const isMannWeib = project.slug === "mann-weib-in-einigkeit";
     return (
       <Link
@@ -59,53 +53,27 @@ export function ProjectCard({ project }: { project: Project }) {
   // title and tagline, same card shell as the other projects so the grid
   // stays visually consistent. imageFit "contain" (e.g. a square logo/badge
   // placeholder) is shown in full on a cream backdrop instead of cropped.
-  if (!image) {
-    return (
-      <Link
-        href={`/projekte/${project.slug}`}
-        className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] hover:opacity-95 transition-opacity"
-      >
-        <div className="relative aspect-[16/9] w-full bg-[var(--color-cream)]">
-          <img
-            src={project.image}
-            alt={project.title}
-            className={
-              project.imageFit === "contain"
-                ? "absolute inset-0 w-full h-full object-contain p-3"
-                : "absolute inset-0 w-full h-full object-cover"
-            }
-          />
-        </div>
-        <div className="p-4">
-          <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">
-            {project.title}
-          </h3>
-          <p className="text-sm text-stone-500 mb-3">{project.tagline}</p>
-          <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
-            Projekt entdecken <span aria-hidden>→</span>
-          </span>
-        </div>
-      </Link>
-    );
-  }
-
-  // "Klangvoll leben": fixed landscape frame. The small "Projekt
-  // entdecken" button sits below the artwork (not on top of it) so it
-  // never covers the baked-in title — no extra paragraph text, just image
-  // + button.
   return (
     <Link
       href={`/projekte/${project.slug}`}
       className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] hover:opacity-95 transition-opacity"
     >
-      <div className="relative aspect-[16/9] w-full">
+      <div className="relative aspect-[16/9] w-full bg-[var(--color-cream)]">
         <img
-          src={image}
+          src={project.image}
           alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={
+            project.imageFit === "contain"
+              ? "absolute inset-0 w-full h-full object-contain p-3"
+              : "absolute inset-0 w-full h-full object-cover"
+          }
         />
       </div>
-      <div className="p-3">
+      <div className="p-4">
+        <h3 className="font-display text-lg text-[var(--color-navy)] mb-1">
+          {project.title}
+        </h3>
+        <p className="text-sm text-stone-500 mb-3">{project.tagline}</p>
         <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
           Projekt entdecken <span aria-hidden>→</span>
         </span>
