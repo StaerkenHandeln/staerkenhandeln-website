@@ -177,18 +177,15 @@ export default async function ProjectDetail({
                   className="w-full rounded-xl object-cover aspect-square md:aspect-[4/5]"
                 />
                 <div className="text-center md:text-left">
-                  <h3 className="font-display italic text-amber-800 text-base md:text-lg mb-3">
-                    {sp.title}
-                  </h3>
                   {pitchParagraphs.map((para, i) => (
-                    <ParagraphBlock key={i} text={para} compact />
+                    <ParagraphBlock key={i} text={para} compact navyHeading />
                   ))}
                   {sp.slug && (
                     <Link
                       href={`/projekte/${project.slug}/${sp.slug}`}
                       className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors mt-2`}
                     >
-                      Projekt entdecken
+                      Frag uns nach diesem Projekt
                     </Link>
                   )}
                 </div>

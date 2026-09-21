@@ -4,9 +4,11 @@ const BOLD_PATTERN = /^\*\*([\s\S]+)\*\*$/;
 export function ParagraphBlock({
   text,
   compact = false,
+  navyHeading = false,
 }: {
   text: string;
   compact?: boolean;
+  navyHeading?: boolean;
 }) {
   const boldMatch = text.trim().match(BOLD_PATTERN);
   if (boldMatch) {
@@ -33,7 +35,9 @@ export function ParagraphBlock({
       <div className="mb-4">
         <p
           className={
-            compact
+            navyHeading
+              ? "font-display not-italic text-[var(--color-navy)] font-bold text-xl md:text-2xl mb-2"
+              : compact
               ? "font-display not-italic text-amber-800 font-bold text-base md:text-lg mb-2"
               : "font-display not-italic text-amber-800 font-bold text-xl md:text-2xl mb-2"
           }
