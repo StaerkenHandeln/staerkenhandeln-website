@@ -66,7 +66,7 @@ export default function Footer() {
                 <li>Datenschutz</li>
                 <li><Link href="/satzung" className="hover:text-[var(--color-maroon)] transition-colors">Satzung</Link></li>
                 <li>Beitragsordnung</li>
-                <li>Barrierefreiheit</li>
+                <li><Link href="/barrierefreiheit" className="hover:text-[var(--color-maroon)] transition-colors">Barrierefreiheit</Link></li>
               </ul>
             </div>
           </div>
