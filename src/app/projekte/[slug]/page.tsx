@@ -161,6 +161,14 @@ export default async function ProjectDetail({
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/kontakt"
+              className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors`}
+            >
+              Frag uns nach diesem Projekt
+            </Link>
+          </div>
         </div>
       )}
 
