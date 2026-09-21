@@ -38,6 +38,7 @@ export const projects: Project[] = [
     accent: "maroon",
     video:
       "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Die7Seelen_Kurzvideo_Webseite.mp4",
+    song: "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/91032a8db_8274ec82d_7Seelen.aac",
   },
   {
     slug: "mann-weib-in-einigkeit",
