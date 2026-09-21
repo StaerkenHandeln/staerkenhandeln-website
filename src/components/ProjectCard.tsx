@@ -24,7 +24,13 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[var(--color-maroon)] text-white text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
               Projekt entdecken <span aria-hidden>→</span>
             </span>
-            {project.song && <SongButton src={project.song} className="text-[11px] px-3 py-1.5" />}
+            {project.song && (
+              <SongButton
+                src={project.song}
+                className="text-[11px] px-3 py-1.5"
+                iconClassName="w-5 h-5"
+              />
+            )}
           </div>
           <div className="min-w-0">
             <h3 className="font-display text-lg md:text-xl leading-snug mb-1 text-[var(--color-navy)]">
@@ -79,7 +85,13 @@ export function ProjectCard({ project }: { project: Project }) {
               <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 py-2 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
                 Projekt entdecken <span aria-hidden>→</span>
               </span>
-              {project.song && <SongButton src={project.song} />}
+              {project.song && (
+                <SongButton
+                  src={project.song}
+                  className="text-xs px-4 py-2"
+                  iconClassName="w-6 h-6"
+                />
+              )}
             </div>
           </div>
         </div>
