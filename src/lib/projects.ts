@@ -81,9 +81,9 @@ export const projects: Project[] = [
         position: "middle",
         image:
           "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/01906c8f8_23908face_ChatGPTImage3Sept202615_38_06.png",
-        title: "Klangbad",
+        title: "Einzelbad",
         text:
-          "♡ Klangbad: getragen von Klang und Schwingungen ♡\nBei einem Klangbad liegst du bequem und geborgen zwischen verschiedenen Klangschalen, meiner Planetenschalen.\nDu badest in Klängen, Schwingungen und wohltuender Frequenzen. Viele Menschen erleben ein Klangbad als tiefe Ruhe, in der ein Gefühl von Leichtigkeit, Geborgenheit und innerer Weite entsteht.\nDu darfst einfach liegen, lauschen und dich von den harmonischen Klängen umhüllen lassen.\n\nEine liebevolle Auszeit, in der du dich von Klang und Frequenz tragen lassen darfst.",
+          "♡ Einzelbad: getragen von Klang und Schwingungen ♡\nBei einem Einzelbad liegst du bequem und geborgen zwischen verschiedenen Klangschalen, meiner Planetenschalen.\nDu badest in Klängen, Schwingungen und wohltuender Frequenzen. Viele Menschen erleben ein Einzelbad als tiefe Ruhe, in der ein Gefühl von Leichtigkeit, Geborgenheit und innerer Weite entsteht.\nDu darfst einfach liegen, lauschen und dich von den harmonischen Klängen umhüllen lassen.\n\nEine liebevolle Auszeit, in der du dich von Klang und Frequenz tragen lassen darfst.",
       },
     ],  },
   {
