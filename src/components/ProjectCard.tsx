@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
+import { SongButton } from "@/components/SongButton";
 
 export function ProjectCard({ project }: { project: Project }) {
   // "Die 7 Seelen" and "Klangvoll leben": small logo on the left with the
@@ -73,9 +74,12 @@ export function ProjectCard({ project }: { project: Project }) {
             <p className="font-display italic text-amber-800/90 leading-relaxed text-[15px] mb-4">
               {project.text}
             </p>
-            <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 py-2 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
-              Projekt entdecken <span aria-hidden>→</span>
-            </span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 py-2 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
+                Projekt entdecken <span aria-hidden>→</span>
+              </span>
+              {project.song && <SongButton src={project.song} />}
+            </div>
           </div>
         </div>
       </Link>

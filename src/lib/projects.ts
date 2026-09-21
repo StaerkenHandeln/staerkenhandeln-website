@@ -7,6 +7,7 @@ export type Project = {
   detail: string;
   accent: "maroon" | "navy";
   video?: string;
+  song?: string;
   poem?: string;
   initiator?: {
     name: string;
@@ -48,6 +49,7 @@ export const projects: Project[] = [
     detail:
       "Ein bewussteres Miteinander zwischen Mann, Weib und den kommenden Generationen. Das Projekt öffnet Raum für Begegnung, ehrlichen Austausch und ein tieferes Verständnis zwischen den Polaritäten für mehr Einigkeit in Partnerschaft und Gemeinschaft.",
     accent: "maroon",
+    song: "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/8a5240724_4502862bb_MannWeib.aac",
     video:
       "https://twffopnohdndyzhmmgag.supabase.co/storage/v1/object/public/videos/Mann_und_Weib_final_neue_saubere_Tonspur.mp4",
   },
