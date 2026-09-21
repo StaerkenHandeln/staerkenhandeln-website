@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "https://media.base44.com/images/public/6a91d252f2a77bee5314ead1/8a5555abd_ChatGPTImage29Aug202620_39_18.png",
     title: "Klangvoll leben",
     tagline: "Klang · Frequenz · Liebe",
-    text: "Achtsame Begleitung mit Klang und Klangschalen für mehr Harmonie im Leben, initiiert und geleitet von Karen.",
+    text: "Ein Raum zum Lauschen, Wahrnehmen und bei dir Ankommen. Begleitet mit Klangschalen, Frequenzen und Frequenzhygiene, für mehr Harmonie in dir selbst, deinem Leben und deinem Miteinander.\n\nInitiiert und begleitet von Karen",
     detail:
       "Ein Raum zum Lauschen, Wahrnehmen und bei sich Ankommen. Mit Klang, Frequenz und Klangschalen begleitet Karen Hagen Menschen dabei, wieder in Harmonie mit sich selbst zu kommen – in Einzelsitzungen und gemeinsamen Klangreisen.",
     accent: "maroon",

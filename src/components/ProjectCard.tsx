@@ -3,10 +3,11 @@ import type { Project } from "@/lib/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   // "Die 7 Seelen" and "Klangvoll leben": small logo on the left with the
-  // (delicate, outlined) "Projekt entdecken" button right underneath it,
-  // live text (title, tagline, description) on the right, kept small
-  // enough to never grow taller than the logo beside it.
+  // permanently red "Projekt entdecken" button right underneath it, live
+  // text (title, tagline, description) on the right, kept small enough to
+  // never grow taller than the logo beside it.
   if (project.slug === "die-7-seelen" || project.slug === "klangvoll-leben") {
+    const textParagraphs = project.text.split("\n\n");
     return (
       <Link
         href={`/projekte/${project.slug}`}
@@ -19,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
               alt={project.title}
               className="w-28 md:w-32 aspect-[2/3] object-cover rounded-xl"
             />
-            <span className="mt-3 inline-flex items-center gap-1 whitespace-nowrap rounded-full border border-[var(--color-maroon)] text-[var(--color-maroon)] text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon)] group-hover:text-white transition-colors">
+            <span className="mt-3 inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-[var(--color-maroon)] text-white text-[11px] font-medium px-3 py-1.5 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
               Projekt entdecken <span aria-hidden>→</span>
             </span>
           </div>
@@ -30,9 +31,14 @@ export function ProjectCard({ project }: { project: Project }) {
             <p className="uppercase tracking-wide text-[10px] font-semibold text-[var(--color-gold)] mb-2">
               {project.tagline}
             </p>
-            <p className="font-display italic text-amber-800/90 leading-relaxed text-[13px]">
-              {project.text}
-            </p>
+            {textParagraphs.map((paragraph, i) => (
+              <p
+                key={i}
+                className="font-display italic text-amber-800/90 leading-relaxed text-[13px] last:mb-0 mb-2"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </Link>
