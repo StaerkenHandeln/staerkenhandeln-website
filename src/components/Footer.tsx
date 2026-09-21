@@ -75,11 +75,14 @@ export default function Footer() {
         <div className="border-t border-stone-200 py-6 text-center">
           <p className="font-display text-sm">
             <span className="text-[var(--color-maroon)]">Stärken.</span>{" "}
-            <span className="text-[var(--color-blue)]">Verbinden.</span>{" "}
-            <span className="text-[var(--color-gold)]">Handeln.</span>
+            <span className="text-[var(--color-navy)]">Handeln.</span>{" "}
+            <span className="text-[var(--color-gold)]">Verbinden.</span>
           </p>
           <p className="text-xs text-stone-400 mt-2">
             © {new Date().getFullYear()} StärkenHandeln. Alle Rechte vorbehalten.
+          </p>
+          <p className="text-xs text-stone-400 mt-1">
+            <span className="text-[var(--color-maroon)]">•</span> Mit Herz gebaut für eine bessere Welt.
           </p>
         </div>
       </div>
