@@ -307,6 +307,317 @@ export default function Datenschutz() {
             Aufruf der Google-Server durch den Browser statt. Es werden keine Daten an Google
             LLC im Zusammenhang mit Schriftarten übertragen.
           </p>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            8. Mitgliederportal und Authentifizierung
+          </h2>
+          <p className="mb-4">
+            Fördermitglieder können sich über ein Mitgliederportal einloggen. Die
+            Authentifizierung erfolgt über ein technisch notwendiges httpOnly-Cookie
+            (4vg_member_token), das ein kryptografisch signiertes JWT (JSON Web Token) enthält.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Verarbeitete Daten:</strong>{" "}
+            E-Mail-Adresse, Mitgliedsnummer (für den Login), sowie Member-ID, Vorname und
+            Ablaufzeitpunkt im JWT.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Zweck:</strong> Authentifizierung und
+            Zugangskontrolle für das Mitgliederportal.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Rechtsgrundlage:</strong> Art. 6 Abs. 1
+            lit. b DSGVO (Vertragserfüllung — Bereitstellung des Mitgliederportals).
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Cookie-Eigenschaften:</strong> httpOnly
+            (nicht per JavaScript abrufbar), secure (nur über HTTPS), sameSite=lax, Gültigkeit
+            30 Tage.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Speicherdauer:</strong> Das Cookie hat
+            eine Gültigkeit von 30 Tagen und wird nach Ablauf automatisch gelöscht. Bei
+            Abmeldung wird das Cookie sofort gelöscht.
+          </p>
+          <p>
+            Es werden keine weiteren Tracking-Cookies, Analytics-Cookies oder
+            Marketing-Cookies gesetzt. Es wird kein Local Storage oder Session Storage für
+            personenbezogene Daten verwendet.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            9. Fördermitgliedschaft
+          </h2>
+          <p className="mb-3">
+            Bei Abschluss einer Fördermitgliedschaft werden folgende personenbezogene Daten
+            erhoben und verarbeitet:
+          </p>
+          <ul className="list-disc pl-5 mb-4 space-y-1">
+            <li>Vor- und Nachname</li>
+            <li>E-Mail-Adresse</li>
+            <li>Adresse (Straße, Hausnummer, PLZ, Ort, Land) — sofern im Formular angegeben</li>
+            <li>Telefonnummer — sofern im Formular angegeben</li>
+            <li>Gewählter Mitgliedsbeitrag und Zahlungsintervall (monatlich/jährlich)</li>
+            <li>Stripe-Kunden-ID und Stripe-Abonnement-ID</li>
+            <li>Mitgliedsnummer (automatisch generiert)</li>
+            <li>Beitrittsdatum</li>
+          </ul>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Zweck:</strong> Verwaltung der
+            Mitgliedschaft, Abbuchung der Mitgliedsbeiträge, Bereitstellung des
+            Mitgliederportals, Versand von Informations-E-Mails.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Rechtsgrundlage:</strong> Art. 6 Abs. 1
+            lit. b DSGVO (Vertragserfüllung) für die Vertragsdaten; die erteilten
+            Einwilligungen (Satzung, Beitragsordnung, Datenschutz) basieren auf Art. 6 Abs. 1
+            lit. a DSGVO.
+          </p>
+          <p>
+            <strong className="text-[var(--color-navy)]">Speicherdauer:</strong> Mitgliedsdaten
+            werden für die Dauer der Mitgliedschaft gespeichert. Nach Austritt oder Kündigung
+            werden die Daten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten
+            (insbesondere steuer- und handelsrechtlicher Natur) entgegenstehen.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            10. Projektbeiträge
+          </h2>
+          <p className="mb-3">
+            Bei der Abgabe eines Projektbeitrags über die Website werden folgende
+            personenbezogene Daten verarbeitet:
+          </p>
+          <ul className="list-disc pl-5 mb-4 space-y-1">
+            <li>Name (angegeben im Stripe Checkout)</li>
+            <li>E-Mail-Adresse (angegeben im Stripe Checkout)</li>
+            <li>Beitragsbetrag und gewähltes Projekt</li>
+            <li>Stripe-Transaktions-IDs (Session-ID, Payment-Intent, Customer-ID)</li>
+            <li>Referenznummer (automatisch generiert)</li>
+          </ul>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Zweck:</strong> Erfassung und
+            Zuordnung von Projektbeiträgen, Bestätigungs-E-Mail, Nachvollziehbarkeit der
+            Mittelverwendung.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Rechtsgrundlage:</strong> Art. 6 Abs. 1
+            lit. b DSGVO (Vertragserfüllung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+            Interesse an transparenter Mittelverwendung).
+          </p>
+          <p>
+            <strong className="text-[var(--color-navy)]">Speicherdauer:</strong> Beitragsdaten
+            werden für die Dauer gesetzlicher Aufbewahrungspflichten gespeichert.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            11. Partnerschaftsanfragen
+          </h2>
+          <p className="mb-4">
+            Über das Kontaktformular auf der Seite /mitmachen/partnerschaft können Interessenten
+            eine Partnerschaftsanfrage an den Verein richten. Dabei werden folgende
+            personenbezogene Daten verarbeitet:
+          </p>
+          <ul className="list-disc pl-5 mb-4 space-y-1">
+            <li>Vor- und Nachname (Pflichtfeld)</li>
+            <li>E-Mail-Adresse (Pflichtfeld)</li>
+            <li>Unternehmen / Organisation (Pflichtfeld)</li>
+            <li>Art der Partnerschaft (Pflichtfeld)</li>
+            <li>Nachricht (Pflichtfeld)</li>
+            <li>Website (optional)</li>
+            <li>Telefonnummer (optional)</li>
+          </ul>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Zweck:</strong> Bearbeitung der
+            Partnerschaftsanfrage und persönliche Kontaktaufnahme durch den Verein. Die
+            Verarbeitung erfolgt ausschließlich auf Grundlage der durch den Interessenten
+            erteilten Einwilligung (Datenschutz-Checkbox im Formular).
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Rechtsgrundlage:</strong> Art. 6 Abs. 1
+            lit. a DSGVO (Einwilligung). Die Einwilligung bezieht sich ausschließlich auf die
+            Bearbeitung der konkreten Anfrage und kann jederzeit widerrufen werden.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Übermittlung:</strong> Die Anfrage wird
+            über die Base44-Backend-Infrastruktur verarbeitet und per E-Mail an den Verein
+            weitergeleitet. Es erfolgt keine dauerhafte Speicherung der Anfragedaten in einer
+            Datenbank. Die E-Mail-Übermittlung erfolgt über die in Abschnitt 6 beschriebene
+            E-Mail-Infrastruktur.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Bestätigungs-E-Mail:</strong> Der
+            Interessent erhält eine automatische Bestätigungs-E-Mail über den Eingang seiner
+            Anfrage. Diese E-Mail wird ebenfalls über die Base44-Backend-Infrastruktur
+            versendet.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">Speicherdauer:</strong> [Speicherfrist
+            vom Verein festzulegen]
+          </p>
+          <p>
+            <strong className="text-[var(--color-navy)]">Keine weitergehende Verarbeitung:</strong>{" "}
+            Die über das Formular erhobenen Daten werden nicht für Marketingzwecke, Profiling,
+            Tracking oder Newsletter-Versand verwendet. Es erfolgt keine Weitergabe an Dritte zu
+            Werbezwecken.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            12. Externe Bildquellen
+          </h2>
+          <p className="mb-4">
+            Diese Website verwendet Bildmaterial von externen Quellen. Beim Aufruf dieser
+            Bilder kann eine Verbindung zu den Servern der jeweiligen Anbieter hergestellt
+            werden, bei der die IP-Adresse des Nutzers verarbeitet werden kann.
+          </p>
+          <p className="mb-4">
+            <strong className="text-[var(--color-navy)]">
+              Unsplash (images.unsplash.com):
+            </strong>{" "}
+            Stock-Fotografie-Anbieter, Unsplash Inc., USA. Bilder werden über das Next.js
+            Image-Optimierungs-System geladen.
+          </p>
+          <p>
+            <strong className="text-[var(--color-navy)]">Base44 Media CDN:</strong> Eigenes
+            Bildmaterial und Projekt-Uploads, bereitgestellt über die Base44-Plattform.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            13. Social-Media-Links
+          </h2>
+          <p className="mb-4">
+            Auf der Website befinden sich Links zu Social-Media-Profilen (Instagram, TikTok).
+            Diese Links führen zu externen Plattformen. Beim Aufruf dieser Links werden keine
+            Daten an die Social-Media-Plattformen übertragen, sofern der Nutzer nicht auf den
+            Link klickt.
+          </p>
+          <p>
+            Beim Klick auf einen Social-Media-Link verlässt der Nutzer unsere Website und
+            befindet sich auf dem Gebiet des jeweiligen Plattformbetreibers. Für die dortige
+            Datenverarbeitung ist ausschließlich der jeweilige Plattformbetreiber
+            verantwortlich.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            14. Ihre Rechte als betroffene Person
+          </h2>
+          <p className="mb-3">Sie haben folgende Rechte nach der DSGVO:</p>
+          <ul className="list-disc pl-5 mb-4 space-y-1">
+            <li>
+              <strong className="text-[var(--color-navy)]">Auskunft (Art. 15 DSGVO):</strong>{" "}
+              Sie können Auskunft über die zu Ihrer Person verarbeiteten Daten verlangen.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">Berichtigung (Art. 16 DSGVO):</strong>{" "}
+              Sie können die Berichtigung unrichtiger personenbezogener Daten verlangen.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">Löschung (Art. 17 DSGVO):</strong>{" "}
+              Sie können die Löschung Ihrer personenbezogenen Daten verlangen, sofern keine
+              gesetzlichen Aufbewahrungspflichten entgegenstehen.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">Einschränkung (Art. 18 DSGVO):</strong>{" "}
+              Sie können die Einschränkung der Verarbeitung verlangen.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">
+                Datenübertragbarkeit (Art. 20 DSGVO):
+              </strong>{" "}
+              Sie können die Herausgabe Ihrer Daten in einem strukturierten, gängigen und
+              maschinenlesbaren Format verlangen.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">Widerspruch (Art. 21 DSGVO):</strong>{" "}
+              Sie können der Verarbeitung widersprechen, die auf Grundlage des berechtigten
+              Interesses erfolgt.
+            </li>
+            <li>
+              <strong className="text-[var(--color-navy)]">
+                Widerruf von Einwilligungen (Art. 7 Abs. 3 DSGVO):
+              </strong>{" "}
+              Eine erteilte Einwilligung können Sie jederzeit widerrufen.
+            </li>
+          </ul>
+          <p>
+            Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{" "}
+            <a
+              href="mailto:4visionglobal.faireint@gmail.com"
+              className="text-[var(--color-maroon)] hover:underline"
+            >
+              4visionglobal.faireint@gmail.com
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            15. Zuständige Aufsichtsbehörde
+          </h2>
+          <p className="mb-4">
+            Bei Beschwerden können Sie sich an die zuständige Datenschutzaufsichtsbehörde
+            wenden:
+          </p>
+          <p>
+            <strong className="text-[var(--color-navy)]">
+              Der Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen
+            </strong>
+            <br />
+            Barichgasse 40-42
+            <br />
+            1030 Wien
+            <br />
+            Österreich
+            <br />
+            <a
+              href="https://www.dsb.gv.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-maroon)] hover:underline"
+            >
+              www.dsb.gv.at
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            16. SSL-Verschlüsselung
+          </h2>
+          <p>
+            Diese Website nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung
+            vertraulicher Inhalte, wie beispielsweise der Anmeldedaten im Mitgliederportal,
+            eine SSL/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran,
+            dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
+            Schloss-Symbol in Ihrer Browserzeile.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl text-[var(--color-navy)] mb-3">
+            17. Kein Tracking, keine Analyse-Tools
+          </h2>
+          <p className="mb-4">
+            Wir setzen kein Tracking ein. Es gibt keine Cookies von Drittanbietern, keine
+            Werbetracking-Tools und keine versteckten Analysedienste.
+          </p>
+          <p>
+            Die einzigen Cookies, die gesetzt werden, sind technisch notwendige Cookies für die
+            Authentifizierung im Mitgliederportal.
+          </p>
+        </section>
         </section>
       </div>
     </div>
