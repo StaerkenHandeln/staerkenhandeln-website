@@ -36,7 +36,7 @@ export function ParagraphBlock({
         <p
           className={
             navyHeading
-              ? "font-display not-italic text-[var(--color-navy)] font-bold text-xl md:text-2xl mb-2"
+              ? "font-display not-italic text-[var(--color-navy)] font-bold text-lg md:text-2xl mb-2 whitespace-nowrap"
               : compact
               ? "font-display not-italic text-amber-800 font-bold text-base md:text-lg mb-2"
               : "font-display not-italic text-amber-800 font-bold text-xl md:text-2xl mb-2"
