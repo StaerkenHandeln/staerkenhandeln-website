@@ -1,13 +1,10 @@
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
 
-// Final, user-approved landscape poster graphics (title + tagline baked
-// directly into the artwork). These are the exact images the user supplied
-// — used as-is, never cropped for content, only fit to a shared landscape
+// Final, user-approved landscape poster graphic (title + tagline baked
+// directly into the artwork). Used as-is, only fit to a shared landscape
 // frame.
 const posterImages: Record<string, string> = {
-  "die-7-seelen":
-    "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/5523241eb_789524c12_ChatGPTImage31Aug202613_53_39.png",
   "klangvoll-leben":
     "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c88341cb7_449b1ad9f_ChatGPTImage31Aug202614_11_14.png",
 };
@@ -15,11 +12,14 @@ const posterImages: Record<string, string> = {
 export function ProjectCard({ project }: { project: Project }) {
   const image = posterImages[project.slug];
 
-  // "Mann & Weib in Einigkeit": bespoke side-by-side layout — the circle
-  // artwork on the left, live text (title, tagline, description, button)
-  // on the right. Kept as real text (not baked into an image) so future
-  // wording changes always show up immediately.
-  if (project.slug === "mann-weib-in-einigkeit") {
+  // "Mann & Weib in Einigkeit" and "Die 7 Seelen": bespoke side-by-side
+  // layout — the small logo artwork on the left, live text (title,
+  // tagline, description, button) on the right. Kept as real text (not
+  // baked into an image) so future wording changes always show up
+  // immediately, and the small logo keeps the card compact (no bigger
+  // than the previous landscape card).
+  if (project.slug === "mann-weib-in-einigkeit" || project.slug === "die-7-seelen") {
+    const isMannWeib = project.slug === "mann-weib-in-einigkeit";
     return (
       <Link
         href={`/projekte/${project.slug}`}
@@ -29,14 +29,15 @@ export function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-40 h-40 md:w-48 md:h-48 object-contain shrink-0"
+            className={
+              isMannWeib
+                ? "w-40 h-40 md:w-48 md:h-48 object-contain shrink-0"
+                : "w-32 md:w-40 aspect-[2/3] object-cover rounded-xl shrink-0"
+            }
           />
           <div className="text-center sm:text-left">
-            <h3 className="font-display text-2xl md:text-3xl mb-1">
-              <span className="text-[var(--color-navy)]">Mann</span>{" "}
-              <span className="text-[var(--color-gold)]">&amp;</span>{" "}
-              <span className="text-[var(--color-maroon)]">Weib</span>{" "}
-              <span className="text-[var(--color-navy)]">in Einigkeit</span>
+            <h3 className="font-display text-2xl md:text-3xl mb-1 text-[var(--color-navy)]">
+              {project.title}
             </h3>
             <p className="uppercase tracking-wide text-xs font-semibold text-[var(--color-gold)] mb-3">
               {project.tagline}
@@ -88,10 +89,10 @@ export function ProjectCard({ project }: { project: Project }) {
     );
   }
 
-  // "Die 7 Seelen" and "Klangvoll leben": same fixed landscape frame so both
-  // cards match in size. The small "Projekt entdecken" button sits below
-  // the artwork (not on top of it) so it never covers the baked-in title —
-  // no extra paragraph text, just image + button.
+  // "Klangvoll leben": fixed landscape frame. The small "Projekt
+  // entdecken" button sits below the artwork (not on top of it) so it
+  // never covers the baked-in title — no extra paragraph text, just image
+  // + button.
   return (
     <Link
       href={`/projekte/${project.slug}`}
