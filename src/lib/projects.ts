@@ -96,6 +96,18 @@ export const projects: Project[] = [
       },
     ],  },
   {
+    slug: "worte-werden-wirklichkeit",
+    image:
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/ebd6ad3d6_worte_werden_wirklichkeit.png",
+    imageFit: "contain",
+    title: "Worte werden Wirklichkeit",
+    tagline: "Was wir sagen, wächst weiter.",
+    text: "Was wir sagen, wächst weiter.",
+    detail:
+      "♡ Worte werden Wirklichkeit ♡\nWas wir sagen, hinterlässt Resonanz\n\nWorte sind weit mehr als aneinandergereihte Buchstaben.\nSie tragen einen Klang, einen Tonfall und eine Bedeutung. Sie können berühren, beruhigen und Mut schenken. Sie können Räume öffnen, neue Perspektiven entstehen lassen und einem Menschen das Gefühl geben:\nIch werde gesehen.\nIch werde gehört.\nIch bin richtig.\n\nWir möchten Menschen dafür sensibilisieren, achtsam mit Sprache und Gedanken umzugehen: in Familien, Partnerschaften, Freundschaften und besonders im Umgang mit Kindern.\n\nWelche Worte möchtest du in die Welt geben?\nUnd welche Worte dürfen in dir selbst neu entstehen?\n\n♡ Sprich so, dass Verbindung wachsen kann. ♡\n♡ Denke so, dass auch du darin ein Zuhause findest. ♡\n\nKaren ♡ Worte werden Wirklichkeit",
+    accent: "maroon",
+  },
+  {
     slug: "wildwiesenwissen",
     image:
       "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/9741cbc72_ea2243c9f_f897df37-6461-49b6-b8a9-e035b882455b.png",
