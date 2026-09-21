@@ -34,6 +34,11 @@ export default async function ProjectDetail({
   );
   const bottomSubProjects = allSubProjects.filter((sp) => sp.position === "bottom");
 
+  // "Klangvoll leben": the intro passage (image, title, tagline, detail
+  // text, contact button) is removed on this page — the video opens the
+  // page instead, right under the back link.
+  const hideIntro = project.slug === "klangvoll-leben";
+
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
       <Link
@@ -43,64 +48,66 @@ export default async function ProjectDetail({
         <span aria-hidden>←</span> Alle Projekte
       </Link>
 
-      <div className="grid md:grid-cols-2 gap-10 items-start">
-        <img
-          src={project.image}
-          alt={project.title}
-          className={
-            project.imageFit === "contain"
-              ? "w-full rounded-xl aspect-[2/3] object-contain bg-[var(--color-cream)] p-6"
-              : "w-full rounded-xl object-cover aspect-[2/3]"
-          }
-        />
-        <div>
-          <h1 className="font-display text-3xl text-[var(--color-navy)] mb-2">
-            {project.title}
-          </h1>
-          <p className={`font-medium mb-6 ${accentText}`}>{project.tagline}</p>
-          <p className="font-display italic text-amber-800/90 leading-relaxed text-[15px] md:text-base mb-8 whitespace-pre-line">{project.detail}</p>
+      {!hideIntro && (
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+          <img
+            src={project.image}
+            alt={project.title}
+            className={
+              project.imageFit === "contain"
+                ? "w-full rounded-xl aspect-[2/3] object-contain bg-[var(--color-cream)] p-6"
+                : "w-full rounded-xl object-cover aspect-[2/3]"
+            }
+          />
+          <div>
+            <h1 className="font-display text-3xl text-[var(--color-navy)] mb-2">
+              {project.title}
+            </h1>
+            <p className={`font-medium mb-6 ${accentText}`}>{project.tagline}</p>
+            <p className="font-display italic text-amber-800/90 leading-relaxed text-[15px] md:text-base mb-8 whitespace-pre-line">{project.detail}</p>
 
-          <Link
-            href="/kontakt"
-            className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors`}
-          >
-            Frag uns nach diesem Projekt
-          </Link>
+            <Link
+              href="/kontakt"
+              className={`inline-block ${accentBg} text-white font-semibold px-6 py-3 rounded-lg ${accentBgHover} transition-colors`}
+            >
+              Frag uns nach diesem Projekt
+            </Link>
 
-          {project.initiator && (
-            <div className="mt-8 bg-[var(--color-cream)] border border-stone-200 rounded-xl p-5 flex gap-4 items-center">
-              {project.initiator.image ? (
-                <img
-                  src={project.initiator.image}
-                  alt={project.initiator.name}
-                  className="w-16 h-16 rounded-full object-cover shrink-0"
-                />
-              ) : (
-                <div className="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center shrink-0">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-stone-400"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="8" r="3.5" />
-                    <path d="M4.5 20c1.5-4 4.5-6 7.5-6s6 2 7.5 6" strokeLinecap="round" />
-                  </svg>
+            {project.initiator && (
+              <div className="mt-8 bg-[var(--color-cream)] border border-stone-200 rounded-xl p-5 flex gap-4 items-center">
+                {project.initiator.image ? (
+                  <img
+                    src={project.initiator.image}
+                    alt={project.initiator.name}
+                    className="w-16 h-16 rounded-full object-cover shrink-0"
+                  />
+                ) : (
+                  <div className="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center shrink-0">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-8 h-8 text-stone-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="8" r="3.5" />
+                      <path d="M4.5 20c1.5-4 4.5-6 7.5-6s6 2 7.5 6" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                )}
+                <div>
+                  <h3 className="font-semibold text-[var(--color-navy)]">{project.initiator.name}</h3>
+                  <p className="text-sm text-[var(--color-maroon)]">{project.initiator.role}</p>
                 </div>
-              )}
-              <div>
-                <h3 className="font-semibold text-[var(--color-navy)]">{project.initiator.name}</h3>
-                <p className="text-sm text-[var(--color-maroon)]">{project.initiator.role}</p>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
-      </div>
+      )}
 
       {project.video && (
-        <div className="mt-12">
+        <div className={hideIntro ? "" : "mt-12"}>
           <div className="rounded-xl overflow-hidden border border-stone-200 bg-[var(--color-navy)]">
             <video
               controls
