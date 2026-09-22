@@ -220,6 +220,32 @@ export default async function ProjectDetail({
           </div>
         );
       })}
+
+      {project.afterText && (
+        <div className="mt-16 max-w-xl mx-auto text-center">
+          <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
+          {project.afterText.split("\n\n").map((para, i) => (
+            <ParagraphBlock key={i} text={para} />
+          ))}
+          <div className="mx-auto mt-8 h-px w-16 bg-amber-300" />
+        </div>
+      )}
+
+      {project.sideInfo && (
+        <div className="mt-8 max-w-md mx-auto">
+          <p className="text-[11px] font-semibold text-stone-400 uppercase tracking-wide text-center mb-3">
+            {project.sideInfo.title}
+          </p>
+          <ul className="space-y-2 text-center">
+            {project.sideInfo.items.map((item, i) => (
+              <li key={i} className="text-xs text-stone-500 leading-relaxed">
+                <span className="font-medium text-stone-600">{item.label}:</span>{" "}
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
