@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Satzung() {
   return (
     <div className="max-w-2xl mx-auto px-6 md:px-12 py-16">
@@ -37,6 +39,13 @@ export default function Satzung() {
             </a>
           </p>
         </section>
+
+        <Link
+          href="/foerdermitgliedschaft"
+          className="inline-block font-medium text-[var(--color-maroon)] hover:underline"
+        >
+          Zur Fördermitgliedschaft <span aria-hidden>→</span>
+        </Link>
       </div>
     </div>
   );
