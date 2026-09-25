@@ -33,6 +33,7 @@ const partners: Partner[] = [
     tag: "Netzwerkpartner",
     location: "Schweiz",
     since: "Partner seit 2026",
+    website: "https://hgmd.tv/",
   },
   {
     logo:
