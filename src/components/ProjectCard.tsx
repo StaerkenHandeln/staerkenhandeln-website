@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
-import { SongButton } from "@/components/SongButton";
 
 export function ProjectCard({ project }: { project: Project }) {
   // "Die 7 Seelen" and "Klangvoll leben": small logo on the left with the
@@ -24,13 +23,6 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="inline-flex items-center justify-center h-9 gap-1 whitespace-nowrap rounded-full bg-[var(--color-maroon)] text-white text-[11px] font-medium px-3 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
               Projekt entdecken <span aria-hidden>→</span>
             </span>
-            {project.song && (
-              <SongButton
-                src={project.song}
-                className="h-9 text-[11px] px-3"
-                iconClassName="w-5 h-6"
-              />
-            )}
           </div>
           <div className="min-w-0">
             <h3 className="font-display text-lg md:text-xl leading-snug mb-1 text-[var(--color-navy)]">
@@ -85,13 +77,6 @@ export function ProjectCard({ project }: { project: Project }) {
               <span className="inline-flex items-center justify-center h-10 gap-1 rounded-full bg-[var(--color-maroon)] text-white text-xs font-medium px-4 group-hover:bg-[var(--color-maroon-dark)] transition-colors">
                 Projekt entdecken <span aria-hidden>→</span>
               </span>
-              {project.song && (
-                <SongButton
-                  src={project.song}
-                  className="h-10 text-xs px-4"
-                  iconClassName="w-6 h-7"
-                />
-              )}
             </div>
           </div>
         </div>

@@ -2,7 +2,6 @@ import Link from "next/link";
 import WaveDivider from "@/components/WaveDivider";
 import { projects } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { SongButton } from "@/components/SongButton";
 
 const team = [
   {
@@ -33,8 +32,6 @@ const mannWeib = projects.find((p) => p.slug === "mann-weib-in-einigkeit")!;
 const die7Seelen = projects.find((p) => p.slug === "die-7-seelen")!;
 const klangvollLeben = projects.find((p) => p.slug === "klangvoll-leben")!;
 
-const vorstellungslied =
-  "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/4c927850b_2e3123d4c_StrkenHandeln-MillionenMenschen.mp3";
 
 export default function Home() {
   return (
@@ -72,23 +69,13 @@ export default function Home() {
             />
           </video>
           <div className="px-6 py-5">
-            <div className="flex flex-col sm:grid sm:grid-cols-3 items-center gap-3">
-              <div className="order-2 sm:order-1 sm:justify-self-start">
-                <SongButton
-                  src={vorstellungslied}
-                  className="h-10 text-xs px-4"
-                  iconClassName="w-6 h-7"
-                />
-              </div>
-              <div className="order-1 sm:order-2 text-center">
-                <h3 className="font-display text-lg">
-                  <span className="text-[var(--color-maroon)]">Stärken</span>
-                  <span className="text-[var(--color-navy)]">Handeln</span>{" "}
-                  <span className="text-[var(--color-gold)]">Entdecken</span>
-                </h3>
-                <div className="mx-auto mt-2 h-[2px] w-16 bg-gradient-to-r from-[var(--color-maroon)] to-[var(--color-gold)] rounded-full" />
-              </div>
-              <div className="hidden sm:block sm:order-3" />
+            <div className="text-center">
+              <h3 className="font-display text-lg">
+                <span className="text-[var(--color-maroon)]">Stärken</span>
+                <span className="text-[var(--color-navy)]">Handeln</span>{" "}
+                <span className="text-[var(--color-gold)]">Entdecken</span>
+              </h3>
+              <div className="mx-auto mt-2 h-[2px] w-16 bg-gradient-to-r from-[var(--color-maroon)] to-[var(--color-gold)] rounded-full" />
             </div>
           </div>
         </div>
