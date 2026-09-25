@@ -18,7 +18,6 @@ type Partner = {
   logo?: string;
   name: string;
   description: string;
-  tag: string;
   location: string;
   since: string;
   website?: string;
@@ -27,13 +26,12 @@ type Partner = {
 const partners: Partner[] = [
   {
     logo:
-      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/b80a87fba_hgmd_logo.png",
-    name: "HGMD",
-    description: "Motion Designer mit Herz und Seele",
-    tag: "Netzwerkpartner",
-    location: "Schweiz",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c0a8bd06e_hui_logo.png",
+    name: "HUI Human United Intelligence",
+    description: "Technologie für Menschen. Mit Menschlichkeit.",
+    location: "Wien, Österreich",
     since: "Partner seit 2026",
-    website: "https://hgmd.tv/",
+    website: "https://be-hui.com/landing.html",
   },
   {
     logo:
@@ -41,7 +39,6 @@ const partners: Partner[] = [
     name: "Verein Liga der Kreativen",
     description:
       "Achtsamkeit als Lebens Einstellung Wer achtsam lebt, lernt spontan und nicht aufgrund von Ängsten vergangener Erfahrungen zu denken und zu entscheiden.",
-    tag: "Gemeinsame Initiative",
     location: "Wien, Österreich",
     since: "Partner seit 2025",
     website: "https://ligaderkreativen.at/",
@@ -51,7 +48,6 @@ const partners: Partner[] = [
       "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/bd2b7a3a0_b78f9c290_image.png",
     name: "4VisionGlobal",
     description: "Gemeinsam schaffen wir, was allein unmöglich wäre.",
-    tag: "Gemeinsame Initiative",
     location: "Wien, Österreich",
     since: "Partner seit 2022",
     website: "https://4visionglobal.com/",
@@ -117,9 +113,6 @@ export default function Partner() {
               <p className="text-sm text-stone-600 leading-relaxed mb-4 flex-grow">
                 {p.description}
               </p>
-              <span className="inline-flex items-center gap-1.5 self-start text-xs font-medium text-[var(--color-maroon)] bg-[var(--color-maroon)]/10 px-3 py-1 rounded-full mb-4">
-                {p.tag}
-              </span>
               <div className="text-xs text-stone-400 space-y-1 mb-4">
                 <p>{p.location}</p>
                 <p>{p.since}</p>
