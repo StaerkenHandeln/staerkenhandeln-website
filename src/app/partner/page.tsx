@@ -44,6 +44,16 @@ const partners: Partner[] = [
     location: "Wien, Österreich",
     since: "Partner seit 2025",
   },
+  {
+    logo:
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/bd2b7a3a0_b78f9c290_image.png",
+    name: "4VisionGlobal",
+    description: "Gemeinsam schaffen wir, was allein unmöglich wäre.",
+    tag: "Gemeinsame Initiative",
+    location: "Wien, Österreich",
+    since: "Partner seit 2022",
+    website: "https://4visionglobal.com/",
+  },
 ];
 
 export default function Partner() {
@@ -126,16 +136,6 @@ export default function Partner() {
               )}
             </div>
           ))}
-
-          {/* Freier Platz für einen weiteren Partner */}
-          <div className="border-2 border-dashed border-stone-200 rounded-xl p-6 flex flex-col items-center justify-center text-center min-h-[220px]">
-            <span className="w-12 h-12 rounded-full border-2 border-dashed border-stone-300 flex items-center justify-center text-stone-300 text-2xl mb-4">
-              +
-            </span>
-            <p className="text-sm text-stone-400 leading-relaxed">
-              Hier ist noch Platz für eine weitere Partnerschaft.
-            </p>
-          </div>
         </div>
       </div>
 
