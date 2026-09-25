@@ -178,7 +178,7 @@ export default function Partner() {
           Dann sprich mit uns.
         </p>
         <Link
-          href="#"
+          href="/partner/anfragen"
           className="inline-flex items-center gap-2 bg-[var(--color-maroon)] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[var(--color-maroon-dark)] transition-colors"
         >
           Partnerschaft anfragen ↗
