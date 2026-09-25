@@ -43,6 +43,7 @@ const partners: Partner[] = [
     tag: "Gemeinsame Initiative",
     location: "Wien, Österreich",
     since: "Partner seit 2025",
+    website: "https://ligaderkreativen.at/",
   },
   {
     logo:
@@ -108,7 +109,7 @@ export default function Partner() {
                 <img
                   src={p.logo}
                   alt={p.name}
-                  className="w-16 h-16 rounded-lg object-cover mb-4"
+                  className="w-24 h-24 rounded-lg object-cover mb-4 mx-auto"
                 />
               )}
               <h3 className="font-semibold text-[var(--color-navy)] mb-2">{p.name}</h3>
