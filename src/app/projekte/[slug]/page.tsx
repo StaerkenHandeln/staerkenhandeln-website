@@ -221,6 +221,21 @@ export default async function ProjectDetail({
         );
       })}
 
+      {project.afterVideo && (
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="rounded-xl overflow-hidden border border-stone-200 bg-[var(--color-navy)]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-auto block"
+            >
+              <source src={project.afterVideo} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
+
       {project.afterText && (
         <div className="mt-16 max-w-xl mx-auto text-center">
           <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
