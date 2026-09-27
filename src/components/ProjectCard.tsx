@@ -92,7 +92,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projekte/${project.slug}`}
-      className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-[var(--color-cream)] hover:opacity-95 transition-opacity"
+      className="group block rounded-2xl overflow-hidden border border-stone-200/60 bg-gradient-to-br from-[var(--color-cream)] to-white hover:opacity-95 transition-opacity"
     >
       <div className="relative aspect-[16/9] w-full bg-[var(--color-cream)]">
         <img
