@@ -64,7 +64,6 @@ export default function Footer() {
               <ul className="space-y-2 text-sm text-stone-500">
                 <li><Link href="/impressum" className="hover:text-[var(--color-maroon)] transition-colors">Impressum</Link></li>
                 <li><Link href="/datenschutz" className="hover:text-[var(--color-maroon)] transition-colors">Datenschutz</Link></li>
-                <li><Link href="/satzung" className="hover:text-[var(--color-maroon)] transition-colors">Satzung</Link></li>
                 <li><Link href="/beitragsordnung" className="hover:text-[var(--color-maroon)] transition-colors">Beitragsordnung</Link></li>
                 <li><Link href="/barrierefreiheit" className="hover:text-[var(--color-maroon)] transition-colors">Barrierefreiheit</Link></li>
               </ul>
