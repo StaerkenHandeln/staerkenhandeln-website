@@ -159,4 +159,16 @@ export const projects: Project[] = [
         "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/1b7e1f8ad_15325df63_image.png",
     },
   },
+  {
+    slug: "ivas-baumperlen-paradies",
+    image:
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/935262440_4e1c7f8b3_photo_2026-09-27_11-54-16.jpg",
+    imageFit: "contain",
+    title: "Iva's Baumperlen Paradies",
+    tagline: "Unikate Handgemacht",
+    text: "Unikate Handgemacht",
+    detail:
+      "Baumperlen Bedeutung\n\nEnergetische Kraft: Man schreibt ihnen oft eine beruhigende und schützende Wirkung zu.",
+    accent: "maroon",
+  },
 ];
