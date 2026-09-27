@@ -168,7 +168,7 @@ export const projects: Project[] = [
     text:
       "Jede Baumperle erzählt eine Geschichte von Wachstum, Veränderung und Zeit. Diese besonderen Holzgebilde können entstehen, wenn ein Baum auf eine Verletzung reagiert und zusätzliches Holzgewebe bildet. Ihr Wachstum kann viele Jahre, manchmal sogar Jahrzehnte dauern.",
     detail:
-      "Jede Baumperle erzählt eine Geschichte von Wachstum, Veränderung und Zeit. Diese besonderen Holzgebilde können entstehen, wenn ein Baum auf eine Verletzung reagiert und zusätzliches Holzgewebe bildet. Ihr Wachstum kann viele Jahre, manchmal sogar Jahrzehnte dauern.\n\nIn Iva's Baumperlen Paradies werden daraus in acht Arbeitsschritten kleine, individuelle Schmuckstücke. Jede Perle bringt ihre eigene Form und Maserung mit – so entsteht ein handgemachtes Unikat mit unverwechselbarem Charakter.\n\nBaumperlen stehen für uns symbolisch für Heilung, Erneuerung und die Kraft, weiterzuwachsen. Als persönliche Glücksbringer können sie an Erdverbundenheit, Geborgenheit und die Verbindung zur Natur erinnern.\n\nEin kleines Stück Natur zum Tragen, Verschenken und Bewahren – und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
+      "Jede Baumperle erzählt eine Geschichte von Wachstum, Veränderung und Zeit. Diese besonderen Holzgebilde können entstehen, wenn ein Baum auf eine Verletzung reagiert und zusätzliches Holzgewebe bildet. Ihr Wachstum kann viele Jahre, manchmal sogar Jahrzehnte dauern.\n\nIn Iva's Baumperlen Paradies werden daraus in acht Arbeitsschritten kleine, individuelle Schmuckstücke. Jede Perle bringt ihre eigene Form und Maserung mit. So entsteht ein handgemachtes Unikat mit unverwechselbarem Charakter.\n\nBaumperlen stehen für uns symbolisch für Heilung, Erneuerung und die Kraft, weiterzuwachsen. Als persönliche Glücksbringer können sie an Erdverbundenheit, Geborgenheit und die Verbindung zur Natur erinnern.\n\nEin kleines Stück Natur zum Tragen, Verschenken und Bewahren. Und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
     accent: "maroon",
     subProjects: [
       {
@@ -177,7 +177,7 @@ export const projects: Project[] = [
           "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/ee8b89bca_a65a00a56_photo_2026-09-27_11-54-33.jpg",
         title: "Iva's Baumperlen Paradies",
         text:
-          "Ein kleines Stück Natur zum Tragen, Verschenken und Bewahren – und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
+          "Ein kleines Stück Natur zum Tragen, Verschenken und Bewahren. Und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
       },
     ],
   },
