@@ -6,7 +6,7 @@ export function ProjectCard({ project }: { project: Project }) {
   // permanently red "Projekt entdecken" button right underneath it, live
   // text (title, tagline, description) on the right, kept small enough to
   // never grow taller than the logo beside it.
-  if (project.slug === "die-7-seelen" || project.slug === "klangvoll-leben") {
+  if (project.slug === "die-7-seelen" || project.slug === "klangvoll-leben" || project.slug === "ivas-baumperlen-paradies") {
     const textParagraphs = project.text.split("\n\n");
     return (
       <Link

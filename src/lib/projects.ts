@@ -162,11 +162,11 @@ export const projects: Project[] = [
   {
     slug: "ivas-baumperlen-paradies",
     image:
-      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/935262440_4e1c7f8b3_photo_2026-09-27_11-54-16.jpg",
-    imageFit: "contain",
+      "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/733d7c222_992081a01_ChatGPT-Bild27Sept202612_14_35.png",
     title: "Iva's Baumperlen Paradies",
     tagline: "Handgemachte Unikate aus der Natur",
-    text: "Handgemachte Unikate aus der Natur",
+    text:
+      "Jede Baumperle erzählt eine Geschichte von Wachstum, Veränderung und Zeit. Diese besonderen Holzgebilde können entstehen, wenn ein Baum auf eine Verletzung reagiert und zusätzliches Holzgewebe bildet. Ihr Wachstum kann viele Jahre, manchmal sogar Jahrzehnte dauern.",
     detail:
       "Jede Baumperle erzählt eine Geschichte von Wachstum, Veränderung und Zeit. Diese besonderen Holzgebilde können entstehen, wenn ein Baum auf eine Verletzung reagiert und zusätzliches Holzgewebe bildet. Ihr Wachstum kann viele Jahre, manchmal sogar Jahrzehnte dauern.\n\nIn Iva's Baumperlen Paradies werden daraus in acht Arbeitsschritten kleine, individuelle Schmuckstücke. Jede Perle bringt ihre eigene Form und Maserung mit – so entsteht ein handgemachtes Unikat mit unverwechselbarem Charakter.\n\nBaumperlen stehen für uns symbolisch für Heilung, Erneuerung und die Kraft, weiterzuwachsen. Als persönliche Glücksbringer können sie an Erdverbundenheit, Geborgenheit und die Verbindung zur Natur erinnern.\n\nEin kleines Stück Natur zum Tragen, Verschenken und Bewahren – und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
     accent: "maroon",
