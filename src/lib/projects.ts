@@ -179,6 +179,14 @@ export const projects: Project[] = [
         text:
           "Ein kleines Stück Natur zum Tragen, Verschenken und Bewahren. Und eine Erinnerung daran, dass aus einer verletzten Stelle etwas Besonderes wachsen kann.",
       },
+      {
+        position: "bottom",
+        image:
+          "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/f439e7efa_80d2b38ce_WhatsAppImage2026-09-27at123620.jpg",
+        title: "Baumperlen in ihrer natürlichen Form",
+        text:
+          "So sehen die Baumperlen aus, bevor sie zu einzigartigen Schmuckstücken verarbeitet werden.",
+      },
     ],
   },
 ];

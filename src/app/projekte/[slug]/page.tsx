@@ -172,10 +172,10 @@ export default async function ProjectDetail({
         </div>
       )}
 
-      {bottomSubProjects.map((sp) => {
+      {bottomSubProjects.map((sp, spIndex) => {
         const pitchParagraphs = sp.text.split("\n\n");
         return (
-          <div key={sp.slug} className="mt-16 max-w-4xl mx-auto">
+          <div key={sp.slug ?? `bottom-${spIndex}`} className="mt-16 max-w-4xl mx-auto">
             <div className="mx-auto mb-8 h-px w-16 bg-amber-300" />
             {sp.image ? (
               <div className="grid md:grid-cols-2 gap-8 items-center">
