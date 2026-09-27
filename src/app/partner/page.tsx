@@ -19,7 +19,6 @@ type Partner = {
   name: string;
   description: string;
   location: string;
-  since: string;
   website?: string;
 };
 
@@ -28,9 +27,9 @@ const partners: Partner[] = [
     logo:
       "https://base44.app/api/apps/6a7f05b048dc9fcfe183cce7/files/mp/public/6a7f05b048dc9fcfe183cce7/c0a8bd06e_hui_logo.png",
     name: "HUI Human United Intelligence",
-    description: "Technologie für Menschen. Mit Menschlichkeit.",
+    description:
+      "HUI bringt Menschen, Talente, Projekte, Werke und Erlebnisse zusammen – und macht daraus Möglichkeiten, die du entdecken, erleben und mitgestalten kannst.",
     location: "Wien, Österreich",
-    since: "Partner seit 2026",
     website: "https://be-hui.com/landing.html",
   },
   {
@@ -40,7 +39,6 @@ const partners: Partner[] = [
     description:
       "Achtsamkeit als Lebens Einstellung Wer achtsam lebt, lernt spontan und nicht aufgrund von Ängsten vergangener Erfahrungen zu denken und zu entscheiden.",
     location: "Wien, Österreich",
-    since: "Partner seit 2025",
     website: "https://ligaderkreativen.at/",
   },
   {
@@ -49,7 +47,6 @@ const partners: Partner[] = [
     name: "4VisionGlobal",
     description: "Gemeinsam schaffen wir, was allein unmöglich wäre.",
     location: "Wien, Österreich",
-    since: "Partner seit 2022",
     website: "https://4visionglobal.com/",
   },
 ];
@@ -113,9 +110,8 @@ export default function Partner() {
               <p className="text-sm text-stone-600 leading-relaxed mb-4 flex-grow">
                 {p.description}
               </p>
-              <div className="text-xs text-stone-400 space-y-1 mb-4">
+              <div className="text-xs text-stone-400 mb-4">
                 <p>{p.location}</p>
-                <p>{p.since}</p>
               </div>
               {p.website ? (
                 <a
